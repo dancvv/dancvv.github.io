@@ -1,21 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - 我的全新 Hugo 网站</title>
-        <link>http://firstincs.github.io/posts/</link>
+        <link>https://two.github.io/posts/</link>
         <description>所有文章 | 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</lastBuildDate><atom:link href="http://firstincs.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</lastBuildDate><atom:link href="https://two.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Reading</title>
-    <link>http://firstincs.github.io/reading/</link>
+    <link>https://two.github.io/reading/</link>
     <pubDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://firstincs.github.io/reading/</guid>
+    <guid>https://two.github.io/reading/</guid>
     <description><![CDATA[最近的读书感想 测试]]></description>
 </item><item>
     <title>First</title>
-    <link>http://firstincs.github.io/first/</link>
+    <link>https://two.github.io/first/</link>
     <pubDate>Sun, 21 Nov 2021 00:00:44 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://firstincs.github.io/first/</guid>
+    <guid>https://two.github.io/first/</guid>
     <description><![CDATA[第一次部署服务器 数据]]></description>
 </item></channel>
 </rss>
