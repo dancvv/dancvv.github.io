@@ -3,20 +3,13 @@
         <title>所有文章 - 我的全新 Hugo 网站</title>
         <link>https://dancvv.github.io/posts/</link>
         <description>所有文章 | 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Dec 2021 10:51:14 &#43;0800</lastBuildDate><atom:link href="https://dancvv.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Second</title>
-    <link>https://dancvv.github.io/second/</link>
-    <pubDate>Sun, 05 Dec 2021 10:51:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://dancvv.github.io/second/</guid>
-    <description><![CDATA[#djkfj jfkdjfk:]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</lastBuildDate><atom:link href="https://dancvv.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Reading</title>
     <link>https://dancvv.github.io/reading/</link>
     <pubDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://dancvv.github.io/reading/</guid>
-    <description><![CDATA[最近的读书感想 测试]]></description>
+    <description><![CDATA[最近的读书感想 一些感想 测试]]></description>
 </item><item>
     <title>First</title>
     <link>https://dancvv.github.io/first/</link>
