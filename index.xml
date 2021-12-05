@@ -1,37 +1,38 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>我的全新 Hugo 网站</title>
-        <link>https://dancvv.github.io/</link>
-        <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</lastBuildDate>
-            <atom:link href="https://dancvv.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <title>四字成语</title>
+        <link>https://firstincs.cn/</link>
+        <description>一个软工在读研究生的网站,施工ing,没有产出,不要看，嘤嘤嘤~</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (dawang coming)</managingEditor>
+            <webMaster>wangvei@mail.dlut.edu.cn (dawang coming)</webMaster><lastBuildDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</lastBuildDate>
+            <atom:link href="https://firstincs.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Algo</title>
-    <link>https://dancvv.github.io/algo/</link>
+    <link>https://firstincs.cn/algo/</link>
     <pubDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://dancvv.github.io/algo/</guid>
+    <guid>https://firstincs.cn/algo/</guid>
     <description><![CDATA[算法感想 一些杂思]]></description>
 </item><item>
     <title>Second</title>
-    <link>https://dancvv.github.io/second/</link>
+    <link>https://firstincs.cn/second/</link>
     <pubDate>Sun, 05 Dec 2021 10:51:14 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://dancvv.github.io/second/</guid>
+    <guid>https://firstincs.cn/second/</guid>
     <description><![CDATA[#djkfj jfkdjfk:]]></description>
 </item><item>
     <title>Reading</title>
-    <link>https://dancvv.github.io/reading/</link>
+    <link>https://firstincs.cn/reading/</link>
     <pubDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://dancvv.github.io/reading/</guid>
+    <guid>https://firstincs.cn/reading/</guid>
     <description><![CDATA[最近的读书感想 一些感想 测试]]></description>
 </item><item>
     <title>First</title>
-    <link>https://dancvv.github.io/first/</link>
+    <link>https://firstincs.cn/first/</link>
     <pubDate>Sun, 21 Nov 2021 00:00:44 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://dancvv.github.io/first/</guid>
+    <guid>https://firstincs.cn/first/</guid>
     <description><![CDATA[第一次部署服务器 数据]]></description>
 </item></channel>
 </rss>
