@@ -3,9 +3,23 @@
         <title>我的全新 Hugo 网站</title>
         <link>https://dancvv.github.io/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</lastBuildDate>
             <atom:link href="https://dancvv.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Algo</title>
+    <link>https://dancvv.github.io/algo/</link>
+    <pubDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://dancvv.github.io/algo/</guid>
+    <description><![CDATA[算法感想 一些杂思]]></description>
+</item><item>
+    <title>Second</title>
+    <link>https://dancvv.github.io/second/</link>
+    <pubDate>Sun, 05 Dec 2021 10:51:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://dancvv.github.io/second/</guid>
+    <description><![CDATA[#djkfj jfkdjfk:]]></description>
+</item><item>
     <title>Reading</title>
     <link>https://dancvv.github.io/reading/</link>
     <pubDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</pubDate>
