@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 四字成语</title>
+        <title>所有文章 - 码代码</title>
         <link>https://firstincs.cn/posts/</link>
-        <description>所有文章 | 四字成语</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (dawang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (dawang coming)</webMaster><lastBuildDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</lastBuildDate><atom:link href="https://firstincs.cn/posts/" rel="self" type="application/rss+xml" /><item>
+        <description>所有文章 | 码代码</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</lastBuildDate><atom:link href="https://firstincs.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Algo</title>
     <link>https://firstincs.cn/algo/</link>
     <pubDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</pubDate>
@@ -26,11 +26,11 @@
     <guid>https://firstincs.cn/reading/</guid>
     <description><![CDATA[最近的读书感想 一些感想 测试]]></description>
 </item><item>
-    <title>First</title>
+    <title>第一次部署网站&amp;一些想法菜单</title>
     <link>https://firstincs.cn/first/</link>
     <pubDate>Sun, 21 Nov 2021 00:00:44 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/first/</guid>
-    <description><![CDATA[第一次部署服务器 数据]]></description>
+    <description><![CDATA[第一次部署网站&amp;一些想法 一些废话 虽然这个标题叫‘第一次部署网站’，但其实我私下里已经部署过另外一个博客了，所以实际上是第二次。之前部]]></description>
 </item></channel>
 </rss>
