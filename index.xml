@@ -14,19 +14,19 @@
     <guid>https://firstincs.cn/algo/</guid>
     <description><![CDATA[算法感想 一些杂思]]></description>
 </item><item>
-    <title>Second</title>
+    <title>conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.</title>
     <link>https://firstincs.cn/second/</link>
     <pubDate>Sun, 05 Dec 2021 10:51:14 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/second/</guid>
-    <description><![CDATA[#djkfj jfkdjfk:]]></description>
+    <description><![CDATA[创建conda环境，激活其他虚拟环境时报错 今天本来正常从github找到一个项目，打算按照常规操作跑起来看看结果，结果一下子出现一堆报错，一]]></description>
 </item><item>
     <title>Reading</title>
     <link>https://firstincs.cn/reading/</link>
     <pubDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/reading/</guid>
-    <description><![CDATA[最近的读书感想 一些感想 测试]]></description>
+    <description><![CDATA[Linux常用命令 一些感想 测试]]></description>
 </item><item>
     <title>第一次部署网站&amp;一些想法</title>
     <link>https://firstincs.cn/first/</link>

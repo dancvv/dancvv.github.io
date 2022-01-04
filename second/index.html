@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Second - 码代码</title><meta name="Description" content="一个软工在读研究生的网站,施工ing"><meta property="og:title" content="Second" />
-<meta property="og:description" content="#djkfj jfkdjfk:" />
+        <title>conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete. - 码代码</title><meta name="Description" content="一个软工在读研究生的网站,施工ing"><meta property="og:title" content="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete." />
+<meta property="og:description" content="创建conda环境，激活其他虚拟环境时报错 今天本来正常从github找到一个项目，打算按照常规操作跑起来看看结果，结果一下子出现一堆报错，一" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://firstincs.cn/second/" />
 <meta property="og:image" content="https://firstincs.cn/images/avatar.png"/>
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://firstincs.cn/images/avatar.png"/>
 
-<meta name="twitter:title" content="Second"/>
-<meta name="twitter:description" content="#djkfj jfkdjfk:"/>
+<meta name="twitter:title" content="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete."/>
+<meta name="twitter:description" content="创建conda环境，激活其他虚拟环境时报错 今天本来正常从github找到一个项目，打算按照常规操作跑起来看看结果，结果一下子出现一堆报错，一"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,12 +24,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Second",
+        "headline": "conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/second\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  942 ,
         "url": "https:\/\/firstincs.cn\/second\/","datePublished": "2021-12-05T10:51:14+08:00","dateModified": "2021-12-05T10:51:14+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,18 +104,379 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Second</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 942 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>#djkfj
-jfkdjfk:</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题复现">问题复现</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="创建conda环境激活其他虚拟环境时报错">创建conda环境，激活其他虚拟环境时报错</h1>
+<p>今天本来正常从github找到一个项目，打算按照常规操作跑起来看看结果，结果一下子出现一堆报错，一下子慌了神，bing（必应）了半天总算找到症结所在。</p>
+<h2 id="问题复现">问题复现</h2>
+<p>创建环境，和切换环境时，出现以下的报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">&gt;</span><span class="n">conda</span> <span class="n">create</span> <span class="n">-n</span> <span class="n">na</span> <span class="n">python</span><span class="p">=</span><span class="n">3</span><span class="p">.</span><span class="n">6</span>
+<span class="n">Collecting</span> <span class="n">package</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">current_repodata</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="err">:</span> <span class="n">failed</span>
+
+<span class="c"># &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; ERROR REPORT &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span><span class="err">:</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\exceptions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">1079</span><span class="p">,</span> <span class="k">in</span> <span class="n">__call__</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(*</span><span class="n">args</span><span class="p">,</span> <span class="p">**</span><span class="n">kwargs</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\main.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">84</span><span class="p">,</span> <span class="k">in</span> <span class="n">_main</span>
+        <span class="n">exit_code</span> <span class="p">=</span> <span class="n">do_call</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\conda_argparse.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">83</span><span class="p">,</span> <span class="k">in</span> <span class="n">do_call</span>
+        <span class="k">return</span> <span class="n">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">func_name</span><span class="p">)(</span><span class="n">args</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\main_create.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">41</span><span class="p">,</span> <span class="k">in</span> <span class="n">execute</span>
+        <span class="n">install</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">parser</span><span class="p">,</span> <span class="s1">&#39;create&#39;</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\install.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">261</span><span class="p">,</span> <span class="k">in</span> <span class="n">install</span>
+        <span class="n">unlink_link_transaction</span> <span class="p">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">solve_for_transaction</span><span class="p">(</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">114</span><span class="p">,</span> <span class="k">in</span> <span class="n">solve_for_transaction</span>
+        <span class="n">unlink_precs</span><span class="p">,</span> <span class="n">link_precs</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">solve_for_diff</span><span class="p">(</span><span class="n">update_modifier</span><span class="p">,</span> <span class="n">deps_modifier</span><span class="p">,</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">157</span><span class="p">,</span> <span class="k">in</span> <span class="n">solve_for_diff</span>
+        <span class="n">final_precs</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">solve_final_state</span><span class="p">(</span><span class="n">update_modifier</span><span class="p">,</span> <span class="n">deps_modifier</span><span class="p">,</span> <span class="n">prune</span><span class="p">,</span> <span class="n">ignore_pinned</span><span class="p">,</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">262</span><span class="p">,</span> <span class="k">in</span> <span class="n">solve_final_state</span>
+        <span class="n">ssc</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_collect_all_metadata</span><span class="p">(</span><span class="n">ssc</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\common\io.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">88</span><span class="p">,</span> <span class="k">in</span> <span class="n">decorated</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(*</span><span class="n">args</span><span class="p">,</span> <span class="p">**</span><span class="n">kwds</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">425</span><span class="p">,</span> <span class="k">in</span> <span class="n">_collect_all_metadata</span>
+        <span class="n">index</span><span class="p">,</span> <span class="nb">r </span><span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_prepare</span><span class="p">(</span><span class="n">prepared_specs</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">1020</span><span class="p">,</span> <span class="k">in</span> <span class="n">_prepare</span>
+        <span class="n">reduced_index</span> <span class="p">=</span> <span class="n">get_reduced_index</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">prefix</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">channels</span><span class="p">,</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\index.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">288</span><span class="p">,</span> <span class="k">in</span> <span class="n">get_reduced_index</span>
+        <span class="n">new_records</span> <span class="p">=</span> <span class="n">SubdirData</span><span class="p">.</span><span class="n">query_all</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">channels</span><span class="p">=</span><span class="n">channels</span><span class="p">,</span> <span class="n">subdirs</span><span class="p">=</span><span class="n">subdirs</span><span class="p">,</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">140</span><span class="p">,</span> <span class="k">in</span> <span class="n">query_all</span>
+        <span class="n">result</span> <span class="p">=</span> <span class="n">tuple</span><span class="p">(</span><span class="n">concat</span><span class="p">(</span><span class="n">executor</span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">subdir_query</span><span class="p">,</span> <span class="n">channel_urls</span><span class="p">)))</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">611</span><span class="p">,</span> <span class="k">in</span> <span class="n">result_iterator</span>
+        <span class="n">yield</span> <span class="n">fs</span><span class="p">.</span><span class="n">pop</span><span class="p">().</span><span class="n">result</span><span class="p">()</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">439</span><span class="p">,</span> <span class="k">in</span> <span class="n">result</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">__get_result</span><span class="p">()</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">388</span><span class="p">,</span> <span class="k">in</span> <span class="n">__get_result</span>
+        <span class="n">raise</span> <span class="n">self</span><span class="p">.</span><span class="n">_exception</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\thread.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">57</span><span class="p">,</span> <span class="k">in</span> <span class="n">run</span>
+        <span class="n">result</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">fn</span><span class="p">(*</span><span class="n">self</span><span class="p">.</span><span class="n">args</span><span class="p">,</span> <span class="p">**</span><span class="n">self</span><span class="p">.</span><span class="n">kwargs</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">132</span><span class="p">,</span> <span class="k">in</span> <span class="p">&lt;</span><span class="n">lambda</span><span class="p">&gt;</span>
+        <span class="n">subdir_query</span> <span class="p">=</span> <span class="n">lambda</span> <span class="n">url</span><span class="err">:</span> <span class="n">tuple</span><span class="p">(</span><span class="n">SubdirData</span><span class="p">(</span><span class="n">Channel</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="n">repodata_fn</span><span class="p">=</span><span class="n">repodata_fn</span><span class="p">).</span><span class="n">query</span><span class="p">(</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">145</span><span class="p">,</span> <span class="k">in</span> <span class="n">query</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">load</span><span class="p">()</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">209</span><span class="p">,</span> <span class="k">in</span> <span class="n">load</span>
+        <span class="n">_internal_state</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_load</span><span class="p">()</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">371</span><span class="p">,</span> <span class="k">in</span> <span class="n">_load</span>
+        <span class="n">raw_repodata_str</span> <span class="p">=</span> <span class="n">fetch_repodata_remote_request</span><span class="p">(</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">694</span><span class="p">,</span> <span class="k">in</span> <span class="n">fetch_repodata_remote_request</span>
+        <span class="n">resp</span> <span class="p">=</span> <span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">join_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="n">headers</span><span class="p">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">proxies</span><span class="p">=</span><span class="n">session</span><span class="p">.</span><span class="n">proxies</span><span class="p">,</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\sessions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">555</span><span class="p">,</span> <span class="k">in</span> <span class="n">get</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="p">**</span><span class="n">kwargs</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\sessions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">542</span><span class="p">,</span> <span class="k">in</span> <span class="n">request</span>
+        <span class="n">resp</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="p">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\sessions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">655</span><span class="p">,</span> <span class="k">in</span> <span class="n">send</span>
+        <span class="nb">r </span><span class="p">=</span> <span class="n">adapter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="p">**</span><span class="n">kwargs</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\adapters.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">439</span><span class="p">,</span> <span class="k">in</span> <span class="n">send</span>
+        <span class="n">resp</span> <span class="p">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connectionpool.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">696</span><span class="p">,</span> <span class="k">in</span> <span class="n">urlopen</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_prepare_proxy</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connectionpool.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">964</span><span class="p">,</span> <span class="k">in</span> <span class="n">_prepare_proxy</span>
+        <span class="n">conn</span><span class="p">.</span><span class="n">connect</span><span class="p">()</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connection.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">359</span><span class="p">,</span> <span class="k">in</span> <span class="n">connect</span>
+        <span class="n">conn</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="n">_connect_tls_proxy</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connection.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">500</span><span class="p">,</span> <span class="k">in</span> <span class="n">_connect_tls_proxy</span>
+        <span class="k">return</span> <span class="n">ssl_wrap_socket</span><span class="p">(</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\util\ssl_.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">432</span><span class="p">,</span> <span class="k">in</span> <span class="n">ssl_wrap_socket</span>
+        <span class="n">ssl_sock</span> <span class="p">=</span> <span class="n">_ssl_wrap_socket_impl</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">tls_in_tls</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\util\ssl_.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">474</span><span class="p">,</span> <span class="k">in</span> <span class="n">_ssl_wrap_socket_impl</span>
+        <span class="k">return</span> <span class="n">ssl_context</span><span class="p">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\ssl.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">500</span><span class="p">,</span> <span class="k">in</span> <span class="n">wrap_socket</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">sslsocket_class</span><span class="p">.</span><span class="n">_create</span><span class="p">(</span>
+      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\ssl.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="n">997</span><span class="p">,</span> <span class="k">in</span> <span class="n">_create</span>
+        <span class="n">raise</span> <span class="n">ValueError</span><span class="p">(</span><span class="s2">&#34;check_hostname requires server_hostname&#34;</span><span class="p">)</span>
+    <span class="n">ValueError</span><span class="err">:</span> <span class="n">check_hostname</span> <span class="n">requires</span> <span class="n">server_hostname</span>
+
+<span class="p">`$</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">conda-script</span><span class="p">.</span><span class="n">py</span> <span class="n">create</span> <span class="n">-n</span> <span class="n">na</span> <span class="n">python</span><span class="p">=</span><span class="n">3</span><span class="p">.</span><span class="n">6</span><span class="p">`</span>
+
+  <span class="n">environment</span> <span class="n">variables</span><span class="err">:</span>
+                 <span class="n">CIO_TEST</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+        <span class="n">CONDA_DEFAULT_ENV</span><span class="p">=</span><span class="n">tmc</span>
+                <span class="n">CONDA_EXE</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">condabin</span><span class="p">\..\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">conda</span><span class="p">.</span><span class="n">exe</span>
+               <span class="n">CONDA_EXES</span><span class="p">=</span><span class="s2">&#34;D:\ProgramData\Anaconda3\condabin\..\Scripts\conda.exe&#34;</span>
+             <span class="n">CONDA_PREFIX</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span>
+           <span class="n">CONDA_PREFIX_1</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span>
+    <span class="n">CONDA_PROMPT_MODIFIER</span><span class="p">=(</span><span class="n">tmc</span><span class="p">)</span>
+         <span class="n">CONDA_PYTHON_EXE</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span>
+               <span class="n">CONDA_ROOT</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span>
+              <span class="n">CONDA_SHLVL</span><span class="p">=</span><span class="n">2</span>
+           <span class="n">CURL_CA_BUNDLE</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+                 <span class="n">HOMEPATH</span><span class="p">=\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span>
+                <span class="n">NODE_PATH</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">nodejs</span><span class="p">\</span><span class="n">node_modules</span>
+                     <span class="n">PATH</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">mingw-w64</span><span class="p">\</span><span class="n">bi</span>
+                          <span class="n">n</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Li</span>
+                          <span class="n">brary</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">bi</span>
+                          <span class="n">n</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span>
+                          <span class="n">Library</span><span class="p">\</span><span class="n">mingw-w64</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bi</span>
+                          <span class="n">n</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anacond</span>
+                          <span class="n">a3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramDa</span>
+                          <span class="n">ta</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">condabin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Python38</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+                          <span class="n">Files</span><span class="p">\</span><span class="n">Python38</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Eclipse</span>
+                          <span class="n">Adoptium</span><span class="p">\</span><span class="n">jdk</span><span class="p">-</span><span class="n">8</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">312</span><span class="p">.</span><span class="n">7-hotspot</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Eclipse</span>
+                          <span class="n">Foundation</span><span class="p">\</span><span class="n">jdk</span><span class="p">-</span><span class="n">11</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">12</span><span class="p">.</span><span class="n">7-hotspot</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span>
+                          <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="n">VMware</span><span class="p">\</span><span class="n">VMware</span> <span class="n">Workstation</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="n">Common</span> <span class="n">File</span>
+                          <span class="n">s</span><span class="p">\</span><span class="n">Oracle</span><span class="p">\</span><span class="n">Java</span><span class="p">\</span><span class="n">javapath</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Oracle</span><span class="p">\</span><span class="n">Java</span><span class="p">\</span><span class="n">javapath</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span>
+                          <span class="n">system32</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="n">Wbem</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="n">Windo</span>
+                          <span class="n">wsPowerShell</span><span class="p">\</span><span class="n">v1</span><span class="p">.</span><span class="n">0</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="n">OpenSSH</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+                          <span class="n">Files</span><span class="p">\</span><span class="n">Maven</span><span class="p">\</span><span class="n">apache-maven</span><span class="p">-</span><span class="n">3</span><span class="p">.</span><span class="n">8</span><span class="p">.</span><span class="n">1</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">MySQL</span><span class="p">\</span><span class="n">MySQL</span> <span class="n">Server</span>
+                          <span class="n">8</span><span class="p">.</span><span class="n">0</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Java</span><span class="p">\</span><span class="n">jdk1</span><span class="p">.</span><span class="n">8</span><span class="p">.</span><span class="n">0_144</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+                          <span class="n">Files</span><span class="p">\</span><span class="n">Python38</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">nodejs</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span>
+                          <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="n">NetSarang</span><span class="p">\</span><span class="n">Xshell</span> <span class="n">7</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">MinGW</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Git</span><span class="p">\</span><span class="n">cmd</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">User</span>
+                          <span class="n">s</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Google</span><span class="p">\</span><span class="n">Chrome</span><span class="p">\</span><span class="n">Application</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramDa</span>
+                          <span class="n">ta</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">MySQL</span><span class="p">\</span><span class="n">MySQL</span> <span class="n">Shell</span> <span class="n">8</span><span class="p">.</span><span class="n">0</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Use</span>
+                          <span class="n">rs</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Microsoft</span><span class="p">\</span><span class="n">WindowsApps</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span>
+                          <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">IntelliJ</span> <span class="n">IDEA</span> <span class="n">2021</span><span class="p">.</span><span class="n">3</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+                          <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">WebStorm</span>
+                          <span class="n">2021</span><span class="p">.</span><span class="n">3</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Roaming</span><span class="p">\</span><span class="n">npm</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span>
+                          <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">PyCharm</span>
+                          <span class="n">2021</span><span class="p">.</span><span class="n">3</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Programs</span><span class="p">\</span><span class="n">Microsoft</span>
+                          <span class="n">VS</span> <span class="n">Code</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">DataGrip</span> <span class="n">2021</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">1</span><span class="p">\</span><span class="n">bin</span><span class="p">;.</span>
+             <span class="n">PSMODULEPATH</span><span class="p">=</span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">WindowsPowerShell</span><span class="p">\</span><span class="n">Modules</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Progra</span>
+                          <span class="n">m</span> <span class="n">Files</span><span class="p">\</span><span class="n">WindowsPowerShell</span><span class="p">\</span><span class="n">Modules</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">system32</span><span class="p">\</span><span class="n">WindowsPowerShel</span>
+                          <span class="n">l</span><span class="p">\</span><span class="n">v1</span><span class="p">.</span><span class="n">0</span><span class="p">\</span><span class="n">Modules</span>
+       <span class="n">REQUESTS_CA_BUNDLE</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+            <span class="n">SSL_CERT_FILE</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+
+     <span class="n">active</span> <span class="n">environment</span> <span class="err">:</span> <span class="n">tmc</span>
+    <span class="n">active</span> <span class="n">env</span> <span class="n">location</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span>
+            <span class="n">shell</span> <span class="n">level</span> <span class="err">:</span> <span class="n">2</span>
+       <span class="n">user</span> <span class="n">config</span> <span class="n">file</span> <span class="err">:</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="n">condarc</span>
+ <span class="n">populated</span> <span class="n">config</span> <span class="n">files</span> <span class="err">:</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="n">condarc</span>
+          <span class="n">conda</span> <span class="n">version</span> <span class="err">:</span> <span class="n">4</span><span class="p">.</span><span class="n">10</span><span class="p">.</span><span class="n">1</span>
+    <span class="n">conda-build</span> <span class="n">version</span> <span class="err">:</span> <span class="n">3</span><span class="p">.</span><span class="n">21</span><span class="p">.</span><span class="n">4</span>
+         <span class="n">python</span> <span class="n">version</span> <span class="err">:</span> <span class="n">3</span><span class="p">.</span><span class="n">8</span><span class="p">.</span><span class="n">8</span><span class="p">.</span><span class="n">final</span><span class="p">.</span><span class="n">0</span>
+       <span class="n">virtual</span> <span class="n">packages</span> <span class="err">:</span> <span class="n">__cuda</span><span class="p">=</span><span class="n">11</span><span class="p">.</span><span class="n">4</span><span class="p">=</span><span class="n">0</span>
+                          <span class="n">__win</span><span class="p">=</span><span class="n">0</span><span class="p">=</span><span class="n">0</span>
+                          <span class="n">__archspec</span><span class="p">=</span><span class="n">1</span><span class="p">=</span><span class="n">x86_64</span>
+       <span class="n">base</span> <span class="n">environment</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span>  <span class="p">(</span><span class="n">writable</span><span class="p">)</span>
+      <span class="n">conda</span> <span class="n">av</span> <span class="n">data</span> <span class="nb">dir </span><span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">etc</span><span class="p">\</span><span class="n">conda</span>
+  <span class="n">conda</span> <span class="n">av</span> <span class="n">metadata</span> <span class="n">url</span> <span class="err">:</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">main</span>
+           <span class="n">channel</span> <span class="n">URLs</span> <span class="err">:</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">win</span><span class="p">-</span><span class="n">64</span>
+                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">noarch</span>
+                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">r</span><span class="p">/</span><span class="n">win</span><span class="p">-</span><span class="n">64</span>
+                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">r</span><span class="p">/</span><span class="n">noarch</span>
+                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">msys2</span><span class="p">/</span><span class="n">win</span><span class="p">-</span><span class="n">64</span>
+                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">msys2</span><span class="p">/</span><span class="n">noarch</span>
+          <span class="n">package</span> <span class="n">cache</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">pkgs</span>
+                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="n">conda</span><span class="p">\</span><span class="n">pkgs</span>
+                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">pkgs</span>
+       <span class="n">envs</span> <span class="n">directories</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span>
+                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="n">conda</span><span class="p">\</span><span class="n">envs</span>
+                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">envs</span>
+               <span class="n">platform</span> <span class="err">:</span> <span class="n">win</span><span class="p">-</span><span class="n">64</span>
+             <span class="n">user-agent</span> <span class="err">:</span> <span class="n">conda</span><span class="p">/</span><span class="n">4</span><span class="p">.</span><span class="n">10</span><span class="p">.</span><span class="n">1</span> <span class="n">requests</span><span class="p">/</span><span class="n">2</span><span class="p">.</span><span class="n">25</span><span class="p">.</span><span class="n">1</span> <span class="n">CPython</span><span class="p">/</span><span class="n">3</span><span class="p">.</span><span class="n">8</span><span class="p">.</span><span class="n">8</span> <span class="n">Windows</span><span class="p">/</span><span class="n">10</span> <span class="n">Windows</span><span class="p">/</span><span class="n">10</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">19041</span>
+          <span class="n">administrator</span> <span class="err">:</span> <span class="n">False</span>
+             <span class="n">netrc</span> <span class="n">file</span> <span class="err">:</span> <span class="n">None</span>
+           <span class="n">offline</span> <span class="n">mode</span> <span class="err">:</span> <span class="n">False</span>
+
+
+<span class="n">An</span> <span class="n">unexpected</span> <span class="n">error</span> <span class="n">has</span> <span class="n">occurred</span><span class="p">.</span> <span class="n">Conda</span> <span class="n">has</span> <span class="n">prepared</span> <span class="n">the</span> <span class="n">above</span> <span class="n">report</span><span class="p">.</span>
+
+<span class="k">If</span> <span class="n">submitted</span><span class="p">,</span> <span class="n">this</span> <span class="n">report</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="n">by</span> <span class="n">core</span> <span class="n">maintainers</span> <span class="n">to</span> <span class="n">improve</span>
+<span class="n">future</span> <span class="n">releases</span> <span class="n">of</span> <span class="n">conda</span><span class="p">.</span>
+<span class="n">Would</span> <span class="n">you</span> <span class="n">like</span> <span class="n">conda</span> <span class="n">to</span> <span class="n">send</span> <span class="n">this</span> <span class="n">report</span> <span class="n">to</span> <span class="n">the</span> <span class="n">core</span> <span class="n">maintainers</span><span class="p">?</span>
+
+<span class="p">[</span><span class="n">y</span><span class="p">/</span><span class="n">N</span><span class="p">]</span><span class="err">:</span> <span class="n">n</span>
+
+<span class="n">No</span> <span class="n">report</span> <span class="n">sent</span><span class="p">.</span> <span class="n">To</span> <span class="n">permanently</span> <span class="n">opt-out</span><span class="p">,</span> <span class="n">use</span>
+
+    <span class="p">$</span> <span class="n">conda</span> <span class="n">config</span> <span class="p">-</span><span class="n">-set</span> <span class="n">report_errors</span> <span class="n">false</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="解决方案">解决方案</h2>
+<p>出现这个问题后，有比较多的解决方案：</p>
+<ul>
+<li>使用命令清理缓存，<code>conda clean -i</code></li>
+<li>删除 ~/.condarc (C:\Users\admin)</li>
+<li>关闭梯子（大杀招）</li>
+</ul>
+<p>反正就是让人头大，解决方案希望对大家有用</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -129,7 +490,7 @@ jfkdjfk:</p>
                             <a class="link-to-markdown" href="/second/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/second/" data-title="Second"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/second/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/second/" data-title="Second" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/second/" data-title="Second"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/second/" data-title="Second"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/second/" data-title="Second" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/second/" data-title="Second" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/second/" data-title="Second"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete."><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/second/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete." data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete."><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete."><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete." data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete." data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/second/" data-title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete."><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -151,7 +512,7 @@ jfkdjfk:</p>
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="firstincs.cn" target="_blank">DaWang coming</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="firstincs.cn" target="_blank">DaWang coming</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
