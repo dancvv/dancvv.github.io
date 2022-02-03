@@ -1,7 +1,7 @@
-# Docker
+# Docker笔记
 
 
-# Docker learning
+# Docker learning script
 
 Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机
 
@@ -76,6 +76,9 @@ docker run
 > -q **静默模式，只显示容器编号**
 > 以上命令都可以组合使用
 
+- 启动容器
+
+`docker start 容器ID或者容器名`
 
 - 退出容器
 

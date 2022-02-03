@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Docker - 码代码</title><meta name="Description" content="一个软工在读研究生的网站,施工ing"><meta property="og:title" content="Docker" />
-<meta property="og:description" content="Docker learning Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机 配置文档位于/" />
+        <title>Docker笔记 - 码代码</title><meta name="Description" content="一个软工在读研究生的网站,施工ing"><meta property="og:title" content="Docker笔记" />
+<meta property="og:description" content="Docker learning script Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机 配置文档位于" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://firstincs.cn/docker/" />
 <meta property="og:image" content="https://firstincs.cn/images/avatar.png"/>
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://firstincs.cn/images/avatar.png"/>
 
-<meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="Docker learning Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机 配置文档位于/"/>
+<meta name="twitter:title" content="Docker笔记"/>
+<meta name="twitter:description" content="Docker learning script Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机 配置文档位于"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,12 +24,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Docker",
+        "headline": "Docker笔记",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  865 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  881 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,9 +104,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Docker</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 865 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 881 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -125,7 +125,7 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="docker-learning">Docker learning</h1>
+            </div><div class="content" id="content"><h1 id="docker-learning-script">Docker learning script</h1>
 <p>Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机</p>
 <p>配置文档位于<code>/etc/sysconfig/docker</code>,，重启检查是否生效<code>service docker restart</code>.</p>
 <p>运行hello world sample</p>
@@ -224,6 +224,10 @@ docker rmi -f 镜像名1：tag 镜像名2：tag
 </blockquote>
 </blockquote>
 <ul>
+<li>启动容器</li>
+</ul>
+<p><code>docker start 容器ID或者容器名</code></p>
+<ul>
 <li>退出容器</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -280,7 +284,7 @@ stop 温柔一些的停止</p>
                             <a class="link-to-markdown" href="/docker/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/docker/" data-title="Docker"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/docker/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/docker/" data-title="Docker" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/docker/" data-title="Docker"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/docker/" data-title="Docker"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/docker/" data-title="Docker" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/docker/" data-title="Docker" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/docker/" data-title="Docker"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/docker/" data-title="Docker笔记"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/docker/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/docker/" data-title="Docker笔记" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/docker/" data-title="Docker笔记"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/docker/" data-title="Docker笔记"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/docker/" data-title="Docker笔记" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/docker/" data-title="Docker笔记" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/docker/" data-title="Docker笔记"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
