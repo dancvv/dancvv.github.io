@@ -104,3 +104,32 @@ docker run
     docker rm -f $(docker ps -a -q)
     docker ps -a -q | xargs docker rm
 ```
+
+- 运行容器
+
+该命令启动守护式容器
+`docker run -d centos`  
+使用centos：latest，以后台模式启动一个容器
+前台启动，交互形式-it  
+
+- 日志打印
+
+`docker logs`
+
+查看容器内的运行进程
+`docker top 用户id`
+
+查看容器内部细节
+`docker inspect 容器id`
+
+- 重新进入容器内环境
+退出后进入容器，exec和attach的区别
+attach
+> 直接进入容器启动命令的终端，不会启动新的进程
+exec
+> 是在容器中打开新的终端，并且可以启动新的进程
+`docker exec -t 容器id ls -l /tmp`  
+
+- 容器内拷贝文件到本机
+`docker cp 容器ID 基本路径`
+

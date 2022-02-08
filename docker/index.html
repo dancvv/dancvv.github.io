@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  881 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  1081 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 881 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1081 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -271,7 +271,37 @@ stop 温柔一些的停止</p>
 </span><span class="err"></span>    docker ps -a -q <span class="p">|</span> xargs docker rm<span class="err">
 </span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><ul>
+<li>运行容器</li>
+</ul>
+<p>该命令启动守护式容器
+<code>docker run -d centos</code><br>
+使用centos：latest，以后台模式启动一个容器
+前台启动，交互形式-it</p>
+<ul>
+<li>日志打印</li>
+</ul>
+<p><code>docker logs</code></p>
+<p>查看容器内的运行进程
+<code>docker top 用户id</code></p>
+<p>查看容器内部细节
+<code>docker inspect 容器id</code></p>
+<ul>
+<li>重新进入容器内环境
+退出后进入容器，exec和attach的区别
+attach</li>
+</ul>
+<blockquote>
+<p>直接进入容器启动命令的终端，不会启动新的进程
+exec
+是在容器中打开新的终端，并且可以启动新的进程
+<code>docker exec -t 容器id ls -l /tmp</code></p>
+</blockquote>
+<ul>
+<li>容器内拷贝文件到本机
+<code>docker cp 容器ID 基本路径</code></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
