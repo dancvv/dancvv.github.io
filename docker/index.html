@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  1081 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2047 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1081 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2047 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -123,6 +123,16 @@
         <li><a href="#容器命令">容器命令</a></li>
       </ul>
     </li>
+    <li><a href="#docker镜像">Docker镜像</a>
+      <ul>
+        <li><a href="#容器数据卷">容器数据卷</a></li>
+        <li><a href="#数据卷">数据卷</a></li>
+        <li><a href="#dockerfile添加">DockerFile添加</a></li>
+        <li><a href="#数据卷容器">数据卷容器</a></li>
+      </ul>
+    </li>
+    <li><a href="#dockerfile解析">DockerFile解析</a></li>
+    <li><a href="#安装mysql">安装mysql</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="docker-learning-script">Docker learning script</h1>
@@ -204,7 +214,7 @@ docker rmi -f 镜像名1：tag 镜像名2：tag
 <blockquote>
 <p>新建并启动容器 <code>docker run [options] image [command]</code></p>
 <blockquote>
-<p>&ndash;name 重命名
+<p>&ndash;name 重命名,将容器名
 <code>docker run -it --name mycentos centos</code> 将centos重命名为mycentos
 -i 以交互模式运行容器，通常与-t同时使用
 -t 为容器重新分配一个伪输入终端，通常-i同时使用</p>
@@ -217,7 +227,7 @@ docker rmi -f 镜像名1：tag 镜像名2：tag
 <p><code>docker ps</code>查看当前所有进程</p>
 <blockquote>
 <p>-a 列出所有正在运行的容器+历史上运行过的
--l 上一次运行的
+-l 最后一次运行的
 -n 显示最近n个创建的容器
 -q <strong>静默模式，只显示容器编号</strong>
 以上命令都可以组合使用</p>
@@ -292,16 +302,108 @@ stop 温柔一些的停止</p>
 attach</li>
 </ul>
 <blockquote>
-<p>直接进入容器启动命令的终端，不会启动新的进程
+<p>进入已经启动的容器终端，不会启动新的进程
+<code>docker attach 容器id</code>
 exec
 是在容器中打开新的终端，并且可以启动新的进程
 <code>docker exec -t 容器id ls -l /tmp</code></p>
 </blockquote>
 <ul>
 <li>容器内拷贝文件到本机
-<code>docker cp 容器ID 基本路径</code></li>
+<code>docker cp 容器ID 基本路径</code>
+从主机复制到容器<code>sudo docker cp host_path containerID:container_path</code><br>
+从容器复制到主机<code>sudo docker cp containerID:container_path host_path</code></li>
 </ul>
-</div><div class="post-footer" id="post-footer">
+<h2 id="docker镜像">Docker镜像</h2>
+<ul>
+<li>
+<p>UnionFS
+联合文件系统，是一种分层、轻量级并且高性能的文件系统，支持对文件系统的修改作为一次提交来一层层的叠加。</p>
+</li>
+<li>
+<p>好处
+<strong>共享资源</strong>，如果有多个镜像都从base镜像构建而来，那么宿主机只需在磁盘上保存一份base镜像。</p>
+</li>
+<li>
+<p>特点
+镜像都是只读的，这一层通常称作容器层，容器层之下的称作镜像层</p>
+</li>
+<li>
+<p>commit命令
+<code>docker commit</code> 提交容器副本使之成为一个新的镜像<br>
+<code>docker commit -m =&quot;提交的描述信息&quot; -a=&quot;作者&quot;</code> 容器ID要创建的目标镜像名:[标签名]
+<code>docker commit -m =&quot;description&quot; -a=&quot;author&quot; newName:1.2</code></p>
+</li>
+</ul>
+<p><code>docker run -it -p 8080:8080 tomcat</code>
+-p 本地端口:docker端口
+-P 随机分配端口</p>
+<h3 id="容器数据卷">容器数据卷</h3>
+<p>为了放置删除镜像后数据丢失，保存数据，使用卷，完全独立于容器之外的<br>
+完全容器的持久化，容器间继承+共享数据</p>
+<h3 id="数据卷">数据卷</h3>
+<p>容器内添加：直接命令添加，DockerFile添加</p>
+<ul>
+<li>直接命令添加
+<code>docker run -it -v /宿主机绝对路径目录：/容器目录 镜像名</code></li>
+</ul>
+<blockquote>
+<p>OS X系统链接必须采用绝对路径，以及将<code>/var</code>添加进docker设置中的resources&gt;file sharing
+<code>docker run -it -v /Users/weivang/dataVolume:/datalum centos</code>
+带权限的命令
+<code>docker run -it -v /宿主机绝对路径目录：/容器目录:ro 镜像名</code>
+该命令进入之后，不可进行写操作，<strong>仅可读操作</strong></p>
+</blockquote>
+<ul>
+<li>验证映射链接成功
+<code>docker inspect 容器id</code></li>
+</ul>
+<h3 id="dockerfile添加">DockerFile添加</h3>
+<p>根目录下新建一个DockerFile文件，使用Volume指令添加<br>
+使用DockerFile是出于可移植和分享的考虑;由于宿主机目录是依赖于特定宿主机的，并不能保证所有的宿主机都存在这样的特定目录。</p>
+<p>DockerFile文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker"><span class="c"># DockerFile构建</span><span class="err">
+</span><span class="err"></span>    FROM centos<span class="err">
+</span><span class="err"></span>    VOLUME <span class="o">[</span><span class="s2">&#34;/dataVolume1&#34;</span>,<span class="s2">&#34;/dataVolume2&#34;</span><span class="o">]</span><span class="err">
+</span><span class="err"></span>    CMD <span class="nb">echo</span> <span class="s2">&#34;finished，-----successed&#34;</span><span class="err">
+</span><span class="err"></span>    CMD <span class="nb">echo</span> <span class="s2">&#34;finished，-----successed&#34;</span><span class="err">
+</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>文件构建命令<code>docker build -f </code>
+使用dockerfile构建的容器自动挂载的数据卷，docker会在宿主机目录自动生成对应的文件</p>
+<h3 id="数据卷容器">数据卷容器</h3>
+<p>其他容器可以通过已经挂载在父容器上的数据卷实现数据共享，挂载数据卷的容器，称之为数据卷容器。<br>
+实现数据共享，一条绳上的蚂蚱。</p>
+<p><code>-volumes-from</code>复制容器数据卷</p>
+<p>容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用为止</p>
+<h2 id="dockerfile解析">DockerFile解析</h2>
+<h2 id="安装mysql">安装mysql</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">    docker search mysql<span class="err">
+</span><span class="err"></span>    docker pull mysql:5.6<span class="err">
+</span><span class="err"></span>    <span class="err">
+</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

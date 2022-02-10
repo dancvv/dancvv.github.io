@@ -63,7 +63,7 @@ docker run
 ### 容器命令
 可以把容器看为一个简易版的Linux系统。**有镜像才能创建容器**，这是一个根本性的前提
 > 新建并启动容器 `docker run [options] image [command]`
-> > --name 重命名
+> > --name 重命名,将容器名
 > `docker run -it --name mycentos centos` 将centos重命名为mycentos
 > > -i 以交互模式运行容器，通常与-t同时使用
 > > -t 为容器重新分配一个伪输入终端，通常-i同时使用
@@ -71,7 +71,7 @@ docker run
 - 查看容器
 > `docker ps`查看当前所有进程
 > > -a 列出所有正在运行的容器+历史上运行过的
-> -l 上一次运行的
+> -l 最后一次运行的
 > -n 显示最近n个创建的容器
 > -q **静默模式，只显示容器编号**
 > 以上命令都可以组合使用
@@ -125,11 +125,84 @@ docker run
 - 重新进入容器内环境
 退出后进入容器，exec和attach的区别
 attach
-> 直接进入容器启动命令的终端，不会启动新的进程
+> 进入已经启动的容器终端，不会启动新的进程
+> `docker attach 容器id`
 exec
 > 是在容器中打开新的终端，并且可以启动新的进程
 `docker exec -t 容器id ls -l /tmp`  
 
 - 容器内拷贝文件到本机
 `docker cp 容器ID 基本路径`
+从主机复制到容器`sudo docker cp host_path containerID:container_path`  
+从容器复制到主机`sudo docker cp containerID:container_path host_path`
 
+## Docker镜像
+- UnionFS
+联合文件系统，是一种分层、轻量级并且高性能的文件系统，支持对文件系统的修改作为一次提交来一层层的叠加。  
+- 好处
+**共享资源**，如果有多个镜像都从base镜像构建而来，那么宿主机只需在磁盘上保存一份base镜像。
+
+- 特点
+镜像都是只读的，这一层通常称作容器层，容器层之下的称作镜像层
+
+- commit命令
+`docker commit` 提交容器副本使之成为一个新的镜像  
+`docker commit -m ="提交的描述信息" -a="作者"` 容器ID要创建的目标镜像名:[标签名]
+`docker commit -m ="description" -a="author" newName:1.2`
+
+`docker run -it -p 8080:8080 tomcat`
+-p 本地端口:docker端口
+-P 随机分配端口
+
+### 容器数据卷
+为了放置删除镜像后数据丢失，保存数据，使用卷，完全独立于容器之外的  
+完全容器的持久化，容器间继承+共享数据
+
+### 数据卷
+容器内添加：直接命令添加，DockerFile添加
+- 直接命令添加
+`docker run -it -v /宿主机绝对路径目录：/容器目录 镜像名`
+> OS X系统链接必须采用绝对路径，以及将`/var`添加进docker设置中的resources>file sharing
+> `docker run -it -v /Users/weivang/dataVolume:/datalum centos`
+> 带权限的命令
+> `docker run -it -v /宿主机绝对路径目录：/容器目录:ro 镜像名`
+> 该命令进入之后，不可进行写操作，**仅可读操作**
+
+- 验证映射链接成功
+`docker inspect 容器id`
+
+### DockerFile添加
+根目录下新建一个DockerFile文件，使用Volume指令添加  
+使用DockerFile是出于可移植和分享的考虑;由于宿主机目录是依赖于特定宿主机的，并不能保证所有的宿主机都存在这样的特定目录。
+
+DockerFile文件
+
+```docker
+# DockerFile构建
+    FROM centos
+    VOLUME ["/dataVolume1","/dataVolume2"]
+    CMD echo "finished，-----successed"
+    CMD echo "finished，-----successed"
+
+```
+文件构建命令`docker build -f `
+使用dockerfile构建的容器自动挂载的数据卷，docker会在宿主机目录自动生成对应的文件
+
+### 数据卷容器
+其他容器可以通过已经挂载在父容器上的数据卷实现数据共享，挂载数据卷的容器，称之为数据卷容器。   
+实现数据共享，一条绳上的蚂蚱。  
+
+`-volumes-from`复制容器数据卷
+
+容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用为止
+
+## DockerFile解析
+
+
+## 安装mysql
+```docker
+    docker search mysql
+    docker pull mysql:5.6
+    
+
+```
