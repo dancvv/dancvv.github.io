@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2047 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2589 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2047 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2589 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -388,19 +388,95 @@ exec
 <p><code>-volumes-from</code>复制容器数据卷</p>
 <p>容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用为止</p>
 <h2 id="dockerfile解析">DockerFile解析</h2>
+<ul>
+<li>基础知识
+每条保留字指令都必须为大写字母，且后面要跟随至少一个参数<br>
+从上到下，顺序执行</li>
+<li>大致流程
+从基础镜像运行一个容器<br>
+执行一条指令对容器进行修改。</li>
+</ul>
+<p>从应用软件的角度来看，DockerFile、Docker镜像与Docker容器分别代表软件的三个不同阶段。</p>
+<blockquote>
+<ul>
+<li>DockerFile是软件的原材料</li>
+<li>Docker镜像是软件的交付品</li>
+<li>Docker容器则可以认为是软件的运行态</li>
+</ul>
+</blockquote>
+<ul>
+<li>DockerFile体系结构，保留字指令</li>
+</ul>
+<blockquote>
+<p>FROM 基础镜像
+MAINTAINER 维护者
+RUN 执行的命令
+EXPOSE 暴露接口
+WORKDIR 工作目录，终端默认登录之后的工作目录
+ENV 用来在构建镜像过程中设置环境变量
+ADD 拷贝+解压缩
+COPY 复制
+VOLUME 容器数据卷
+CMD 容器启动时要运行的命令
+ENTRYPOINT 指定一个容器时要运行的命令,ENTRYPOINT的目的和CMD一样，都是在指定容器启动程序及参数
+ONBUILD 父镜像在子镜像被继承后，父镜像的onbuild被触发</p>
+</blockquote>
+<ul>
+<li>案例
+自定义一个centos镜像，使得镜像mycentos自己的镜像具备如下：</li>
+</ul>
+<blockquote>
+<p>登录后的默认路径
+vim编辑器
+查看网络配置ifconfig支持</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">    FROM CENTOS<span class="err">
+</span><span class="err">
+</span><span class="err"></span>    ENV mypath /tmp<span class="err">
+</span><span class="err"></span>    WORKDIR <span class="nv">$mypath</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>    RUN yum -y install vim<span class="err">
+</span><span class="err"></span>    RUN yun -y install net-tools<span class="err">
+</span><span class="err">
+</span><span class="err"></span>    EXPOSE <span class="m">80</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>    CMD <span class="nb">echo</span> <span class="nv">$mypath</span><span class="err">
+</span><span class="err"></span>    CMD <span class="nb">echo</span> <span class="s2">&#34;success ----- ok&#34;</span><span class="err">
+</span><span class="err"></span>    CMD /bin/bash<span class="err">
+</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>构建，<code>docker build -t 新镜像名字:tag .</code><br>
+运行，<code>docker run -it 新镜像名字:tag</code>
+列出镜像的变更历史，<code>docker history 镜像名</code></p>
+<p>CMD和entrypoint的区别</p>
 <h2 id="安装mysql">安装mysql</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-docker" data-lang="docker">    docker search mysql<span class="err">
 </span><span class="err"></span>    docker pull mysql:5.6<span class="err">
-</span><span class="err"></span>    <span class="err">
-</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">

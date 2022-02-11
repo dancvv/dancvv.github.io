@@ -197,12 +197,65 @@ DockerFile文件
 容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用为止
 
 ## DockerFile解析
+- 基础知识
+每条保留字指令都必须为大写字母，且后面要跟随至少一个参数   
+从上到下，顺序执行
+- 大致流程
+从基础镜像运行一个容器   
+执行一条指令对容器进行修改。
+
+从应用软件的角度来看，DockerFile、Docker镜像与Docker容器分别代表软件的三个不同阶段。
+> * DockerFile是软件的原材料
+> * Docker镜像是软件的交付品
+> * Docker容器则可以认为是软件的运行态
+
+- DockerFile体系结构，保留字指令
+> FROM 基础镜像
+> MAINTAINER 维护者
+> RUN 执行的命令
+> EXPOSE 暴露接口
+> WORKDIR 工作目录，终端默认登录之后的工作目录
+> ENV 用来在构建镜像过程中设置环境变量
+> ADD 拷贝+解压缩
+> COPY 复制
+> VOLUME 容器数据卷
+> CMD 容器启动时要运行的命令
+> ENTRYPOINT 指定一个容器时要运行的命令,ENTRYPOINT的目的和CMD一样，都是在指定容器启动程序及参数
+> ONBUILD 父镜像在子镜像被继承后，父镜像的onbuild被触发
+
+- 案例
+自定义一个centos镜像，使得镜像mycentos自己的镜像具备如下：
+> 登录后的默认路径
+> vim编辑器
+> 查看网络配置ifconfig支持
+
+```docker
+    FROM CENTOS
+
+    ENV mypath /tmp
+    WORKDIR $mypath
+
+    RUN yum -y install vim
+    RUN yun -y install net-tools
+
+    EXPOSE 80
+
+    CMD echo $mypath
+    CMD echo "success ----- ok"
+    CMD /bin/bash
+
+```
+构建，`docker build -t 新镜像名字:tag .`   
+运行，`docker run -it 新镜像名字:tag`
+列出镜像的变更历史，`docker history 镜像名`
+
+CMD和entrypoint的区别
+
 
 
 ## 安装mysql
 ```docker
     docker search mysql
     docker pull mysql:5.6
-    
-
 ```
+
