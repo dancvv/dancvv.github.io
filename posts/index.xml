@@ -4,7 +4,14 @@
         <link>https://firstincs.cn/posts/</link>
         <description>所有文章 | 码代码</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</lastBuildDate><atom:link href="https://firstincs.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Mon, 14 Feb 2022 00:04:49 &#43;0800</lastBuildDate><atom:link href="https://firstincs.cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Springdoc</title>
+    <link>https://firstincs.cn/springdoc/</link>
+    <pubDate>Mon, 14 Feb 2022 00:04:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/springdoc/</guid>
+    <description><![CDATA[SpringBoot生成OpenAPI 3.0文档 概述 开发过程中需要写大量的接口文档，如果手写的话需要花费一定的时间，并且还需要额外的时间进行]]></description>
+</item><item>
     <title>Docker笔记</title>
     <link>https://firstincs.cn/docker/</link>
     <pubDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</pubDate>
