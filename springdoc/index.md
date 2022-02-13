@@ -36,3 +36,27 @@
     springdoc.api-docs.enabled=true
 ```
 简单的配置之后，启动项目，在本地端口加上自定义的路径就可以进入API接口文档。以默认项目8080端口为例，其访问路径为`htttp://localhost:8080/swagger-ui.html`
+
+## 注解迁移
+从swagger2项目中迁移后，需要替换掉所有的swagger2注解：
+@Api → @Tag
+
+@ApiIgnore → @Parameter(hidden = true) or @Operation(hidden = true) or @Hidden
+
+@ApiImplicitParam → @Parameter
+
+@ApiImplicitParams → @Parameters
+
+@ApiModel → @Schema
+
+@ApiModelProperty(hidden = true) → @Schema(accessMode = READ_ONLY)
+
+@ApiModelProperty → @Schema
+
+@ApiOperation(value = "foo", notes = "bar") → @Operation(summary = "foo", description = "bar")
+
+@ApiParam → @Parameter
+
+@ApiResponse(code = 404, message = "foo") → @ApiResponse(responseCode = "404", description = "foo")
+
+

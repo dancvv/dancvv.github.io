@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/springdoc\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  622 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  723 ,
         "url": "https:\/\/firstincs.cn\/springdoc\/","datePublished": "2022-02-14T00:04:49+08:00","dateModified": "2022-02-14T00:04:49+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Springdoc</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-14">2022-02-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 622 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-14">2022-02-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 723 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -118,6 +118,7 @@
     <li><a href="#概述">概述</a></li>
     <li><a href="#pom引入">pom引入</a></li>
     <li><a href="#文档设置">文档设置</a></li>
+    <li><a href="#注解迁移">注解迁移</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="springboot生成openapi-30文档">SpringBoot生成OpenAPI 3.0文档</h1>
@@ -174,6 +175,18 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>简单的配置之后，启动项目，在本地端口加上自定义的路径就可以进入API接口文档。以默认项目8080端口为例，其访问路径为<code>htttp://localhost:8080/swagger-ui.html</code></p>
+<h2 id="注解迁移">注解迁移</h2>
+<p>从swagger2项目中迁移后，需要替换掉所有的swagger2注解：
+@Api → @Tag</p>
+<p>@ApiIgnore → @Parameter(hidden = true) or @Operation(hidden = true) or @Hidden</p>
+<p>@ApiImplicitParam → @Parameter</p>
+<p>@ApiImplicitParams → @Parameters</p>
+<p>@ApiModel → @Schema</p>
+<p>@ApiModelProperty(hidden = true) → @Schema(accessMode = READ_ONLY)</p>
+<p>@ApiModelProperty → @Schema</p>
+<p>@ApiOperation(value = &ldquo;foo&rdquo;, notes = &ldquo;bar&rdquo;) → @Operation(summary = &ldquo;foo&rdquo;, description = &ldquo;bar&rdquo;)</p>
+<p>@ApiParam → @Parameter</p>
+<p>@ApiResponse(code = 404, message = &ldquo;foo&rdquo;) → @ApiResponse(responseCode = &ldquo;404&rdquo;, description = &ldquo;foo&rdquo;)</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
