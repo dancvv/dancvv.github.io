@@ -76,6 +76,10 @@ docker run
 > -q **静默模式，只显示容器编号**
 > 以上命令都可以组合使用
 
+- 容器重命名
+`docker rename oldName newName`   
+对部分容器重新命名
+
 - 启动容器
 
 `docker start 容器ID或者容器名`
@@ -197,6 +201,7 @@ DockerFile文件
 容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用为止
 
 ## DockerFile解析
+Dockerfile是用来构建Docker镜像的构建文件，是由一系列命令和参数构成的脚本。   
 - 基础知识
 每条保留字指令都必须为大写字母，且后面要跟随至少一个参数   
 从上到下，顺序执行
@@ -245,17 +250,19 @@ DockerFile文件
     CMD /bin/bash
 
 ```
-构建，`docker build -t 新镜像名字:tag .`   
+构建，`docker build -t 新镜像名字:tag .`，注：最后的 . 代表本次执行的上下文路径，下一节会介绍。   
 运行，`docker run -it 新镜像名字:tag`
 列出镜像的变更历史，`docker history 镜像名`
 
 CMD和entrypoint的区别
 
-
-
-## 安装mysql
+## 安装mysql及使用
 ```docker
     docker search mysql
     docker pull mysql:5.6
+    docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+    停止mysql之后，使用restart命令重新进入
+    docker restart 容器id
 ```
+
 

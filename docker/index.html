@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2589 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2726 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2589 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2726 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -132,7 +132,7 @@
       </ul>
     </li>
     <li><a href="#dockerfile解析">DockerFile解析</a></li>
-    <li><a href="#安装mysql">安装mysql</a></li>
+    <li><a href="#安装mysql及使用">安装mysql及使用</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="docker-learning-script">Docker learning script</h1>
@@ -234,7 +234,14 @@ docker rmi -f 镜像名1：tag 镜像名2：tag
 </blockquote>
 </blockquote>
 <ul>
-<li>启动容器</li>
+<li>
+<p>容器重命名
+<code>docker rename oldName newName</code><br>
+对部分容器重新命名</p>
+</li>
+<li>
+<p>启动容器</p>
+</li>
 </ul>
 <p><code>docker start 容器ID或者容器名</code></p>
 <ul>
@@ -388,6 +395,7 @@ exec
 <p><code>-volumes-from</code>复制容器数据卷</p>
 <p>容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用为止</p>
 <h2 id="dockerfile解析">DockerFile解析</h2>
+<p>Dockerfile是用来构建Docker镜像的构建文件，是由一系列命令和参数构成的脚本。</p>
 <ul>
 <li>基础知识
 每条保留字指令都必须为大写字母，且后面要跟随至少一个参数<br>
@@ -464,19 +472,25 @@ vim编辑器
 </span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
-</div><p>构建，<code>docker build -t 新镜像名字:tag .</code><br>
+</div><p>构建，<code>docker build -t 新镜像名字:tag .</code>，注：最后的 . 代表本次执行的上下文路径，下一节会介绍。<br>
 运行，<code>docker run -it 新镜像名字:tag</code>
 列出镜像的变更历史，<code>docker history 镜像名</code></p>
 <p>CMD和entrypoint的区别</p>
-<h2 id="安装mysql">安装mysql</h2>
+<h2 id="安装mysql及使用">安装mysql及使用</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-docker" data-lang="docker">    docker search mysql<span class="err">
 </span><span class="err"></span>    docker pull mysql:5.6<span class="err">
+</span><span class="err"></span>    docker run -p 3306:3306 --name mysql -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>root -d mysql:5.7<span class="err">
+</span><span class="err"></span>    停止mysql之后，使用restart命令重新进入<span class="err">
+</span><span class="err"></span>    docker restart 容器id<span class="err">
 </span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
