@@ -4,15 +4,22 @@
         <link>https://firstincs.cn/</link>
         <description>一个软工在读研究生的网站,施工ing</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Fri, 25 Feb 2022 19:24:45 &#43;0800</lastBuildDate>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Fri, 25 Feb 2022 20:39:47 &#43;0800</lastBuildDate>
             <atom:link href="https://firstincs.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[LeetCode 1523] 在区间范围内统计奇数数目</title>
+    <link>https://firstincs.cn/leetcode-1523/</link>
+    <pubDate>Fri, 25 Feb 2022 20:39:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/leetcode-1523/</guid>
+    <description><![CDATA[LeetCode 1523，题目链接：https://leetcode-cn.com/problems/count-odd-numbers-in-an-in]]></description>
+</item><item>
     <title>[LeetCode 537] 复数乘法</title>
     <link>https://firstincs.cn/leetcode-537/</link>
     <pubDate>Fri, 25 Feb 2022 19:24:45 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-537/</guid>
-    <description><![CDATA[这个题涉及到数学中复变函数的运算，也很简单，没有涉及到复杂运算，仅实现复数乘法。它的难处在于如何让两个字符串实现乘法运算。 简单科普一下复数乘]]></description>
+    <description><![CDATA[LeetCode 537，题目链接https://leetcode-cn.com/problems/complex-number-multiplicatio]]></description>
 </item><item>
     <title>[LeetCode 1706] 球会落何处</title>
     <link>https://firstincs.cn/leetcode-1706/</link>
