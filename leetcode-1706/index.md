@@ -1,7 +1,7 @@
 # [LeetCode 1706] 球会落何处
 
 
-LeetCode 1706，题目链接：<https://leetcode-cn.com/problems/where-will-the-ball-fall/>
+LeetCode 1706，[题目链接点我](https://leetcode-cn.com/problems/where-will-the-ball-fall/)
 
 拿到这个题之后，首先分析其限制条件。根据题意可以发现，球会在三个地方卡住，左右两侧的墙壁上，以及两侧挡板形成的V型槽。
 

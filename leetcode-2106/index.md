@@ -1,7 +1,7 @@
 # [LeetCode 2106] 增量元素之间的最大差值
 
 
-LeetCode 2106，题目链接：<https://leetcode-cn.com/problems/maximum-difference-between-increasing-elements/>
+LeetCode 2106，[题目链接点我](https://leetcode-cn.com/problems/maximum-difference-between-increasing-elements/)
 
 这个题虽然是个简单题，但是我还是花了一点时间来解答，猛的想错了方向，差点没绕出来。其实，还是很简单的，只需要采用一个for循环外加两个条件判断即可。
 

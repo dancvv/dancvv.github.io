@@ -10,28 +10,28 @@
     <pubDate>Sat, 26 Feb 2022 16:41:46 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-2106/</guid>
-    <description><![CDATA[LeetCode 2106，题目链接：https://leetcode-cn.com/problems/maximum-difference-between]]></description>
+    <description><![CDATA[LeetCode 2106，题目链接点我 这个题虽然是个简单题，但是我还是花了一点时间来解答，猛的想错了方向，差点没绕出来。其实，还是很简单的，只需要采用一个]]></description>
 </item><item>
     <title>[LeetCode 1523] 在区间范围内统计奇数数目</title>
     <link>https://firstincs.cn/leetcode-1523/</link>
     <pubDate>Fri, 25 Feb 2022 20:39:47 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-1523/</guid>
-    <description><![CDATA[LeetCode 1523，题目链接：https://leetcode-cn.com/problems/count-odd-numbers-in-an-in]]></description>
+    <description><![CDATA[LeetCode 1523，题目链接点我 一行代码解决 high加一是为了补上缺失的那一个，[0,x]范围的奇数必定为x的一半。如果x为奇数，比如7，根据Jav]]></description>
 </item><item>
     <title>[LeetCode 537] 复数乘法</title>
     <link>https://firstincs.cn/leetcode-537/</link>
     <pubDate>Fri, 25 Feb 2022 19:24:45 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-537/</guid>
-    <description><![CDATA[LeetCode 537，题目链接https://leetcode-cn.com/problems/complex-number-multiplicatio]]></description>
+    <description><![CDATA[LeetCode 537，题目链接点我 这个题涉及到数学中复变函数的运算，也很简单，没有涉及到复杂运算，仅实现复数乘法。它的难处在于如何让两个字符串实现乘法运]]></description>
 </item><item>
     <title>[LeetCode 1706] 球会落何处</title>
     <link>https://firstincs.cn/leetcode-1706/</link>
     <pubDate>Thu, 24 Feb 2022 20:44:38 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-1706/</guid>
-    <description><![CDATA[LeetCode 1706，题目链接：https://leetcode-cn.com/problems/where-will-the-ball-fall/ 拿]]></description>
+    <description><![CDATA[LeetCode 1706，题目链接点我 拿到这个题之后，首先分析其限制条件。根据题意可以发现，球会在三个地方卡住，左右两侧的墙壁上，以及两侧挡板形成的V型槽]]></description>
 </item><item>
     <title>SpringBoot生成OpenAPI 3.0文档</title>
     <link>https://firstincs.cn/springdoc/</link>

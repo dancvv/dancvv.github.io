@@ -1,7 +1,7 @@
 # [LeetCode 537] 复数乘法
 
 
-LeetCode 537，题目链接<https://leetcode-cn.com/problems/complex-number-multiplication/>
+LeetCode 537，[题目链接点我](https://leetcode-cn.com/problems/complex-number-multiplication/)
 
 这个题涉及到数学中复变函数的运算，也很简单，没有涉及到复杂运算，仅实现复数乘法。它的难处在于如何让两个字符串实现乘法运算。
 

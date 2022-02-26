@@ -1,7 +1,7 @@
 # [LeetCode 1523] 在区间范围内统计奇数数目
 
 
-LeetCode 1523，题目链接：<https://leetcode-cn.com/problems/count-odd-numbers-in-an-interval-range/>
+LeetCode 1523，[题目链接点我](https://leetcode-cn.com/problems/count-odd-numbers-in-an-interval-range/)
 
 一行代码解决
 
