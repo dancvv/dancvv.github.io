@@ -4,9 +4,16 @@
         <link>https://firstincs.cn/</link>
         <description>一个软工在读研究生的网站,施工ing</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Sat, 26 Feb 2022 16:41:46 &#43;0800</lastBuildDate>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Mon, 28 Feb 2022 22:41:23 &#43;0800</lastBuildDate>
             <atom:link href="https://firstincs.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[LeetCode 209] 长度最小的子数组</title>
+    <link>https://firstincs.cn/leetcode-209/</link>
+    <pubDate>Mon, 28 Feb 2022 22:41:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/leetcode-209/</guid>
+    <description><![CDATA[LeetCode 537，题目链接点我 这个题一开始想到了暴力破解的方式，利用两层for循环，以第一层为起点，在第二层里面不断累加，如果和大于等于target]]></description>
+</item><item>
     <title>[LeetCode 2106] 增量元素之间的最大差值</title>
     <link>https://firstincs.cn/leetcode-2106/</link>
     <pubDate>Sat, 26 Feb 2022 16:41:46 &#43;0800</pubDate>
