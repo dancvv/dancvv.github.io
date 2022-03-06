@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2726 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2793 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2726 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2793 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -484,11 +484,15 @@ vim编辑器
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-docker" data-lang="docker">    docker search mysql<span class="err">
 </span><span class="err"></span>    docker pull mysql:5.6<span class="err">
 </span><span class="err"></span>    docker run -p 3306:3306 --name mysql -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>root -d mysql:5.7<span class="err">
+</span><span class="err"></span>    除了这种方式外，还可以挂载数据卷，以mac为例，Linux同样的操作，就是要注意路径为绝对路径不然容易出错<span class="err">
+</span><span class="err"></span>    docker run -p 3306:3306 -v /Users/weivang/DataVolume/mysql:/var/lib/mysql --name mysql -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>root -d mysql:5.7<span class="err">
 </span><span class="err"></span>    停止mysql之后，使用restart命令重新进入<span class="err">
 </span><span class="err"></span>    docker restart 容器id<span class="err">
 </span></code></pre></td></tr></table>

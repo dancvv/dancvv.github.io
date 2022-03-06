@@ -261,6 +261,8 @@ CMD和entrypoint的区别
     docker search mysql
     docker pull mysql:5.6
     docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+    除了这种方式外，还可以挂载数据卷，以mac为例，Linux同样的操作，就是要注意路径为绝对路径不然容易出错
+    docker run -p 3306:3306 -v /Users/weivang/DataVolume/mysql:/var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
     停止mysql之后，使用restart命令重新进入
     docker restart 容器id
 ```
