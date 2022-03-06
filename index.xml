@@ -2,11 +2,25 @@
     <channel>
         <title>码代码</title>
         <link>https://firstincs.cn/</link>
-        <description>一个软工在读研究生的网站,施工ing</description>
+        <description>一个软工在读研究生的网站;一朝红日出,依旧与天齐</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Mon, 28 Feb 2022 22:41:23 &#43;0800</lastBuildDate>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Sun, 06 Mar 2022 18:43:12 &#43;0800</lastBuildDate>
             <atom:link href="https://firstincs.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[Leetcode 1356] 统计数字在二进制下1的数目排序</title>
+    <link>https://firstincs.cn/leetcode-1356/</link>
+    <pubDate>Sun, 06 Mar 2022 18:43:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/leetcode-1356/</guid>
+    <description><![CDATA[LeetCode 1356，题目链接 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public int[] sortByBits(int[] arr) { // 巧妙的解法 // 利用java自身携带的统计函数 for(int i=0; i&lt;arr.length; i++){ arr[i] = Integer.bitCount(arr[i]) * 1000000 +]]></description>
+</item><item>
+    <title>面试题 02.07 链表相交</title>
+    <link>https://firstincs.cn/offer-07/</link>
+    <pubDate>Wed, 02 Mar 2022 10:41:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/offer-07/</guid>
+    <description><![CDATA[面试题 02.07 链表相交，题目链接点我 这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么我把一]]></description>
+</item><item>
     <title>[LeetCode 209] 长度最小的子数组</title>
     <link>https://firstincs.cn/leetcode-209/</link>
     <pubDate>Mon, 28 Feb 2022 22:41:23 &#43;0800</pubDate>
@@ -62,19 +76,5 @@
     <author>作者</author>
     <guid>https://firstincs.cn/condafix/</guid>
     <description><![CDATA[创建conda环境，激活其他虚拟环境时报错 今天本来正常从github找到一个项目，打算按照常规操作跑起来看看结果，结果一下子出现一堆报错，一]]></description>
-</item><item>
-    <title>Reading</title>
-    <link>https://firstincs.cn/reading/</link>
-    <pubDate>Sat, 04 Dec 2021 21:24:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://firstincs.cn/reading/</guid>
-    <description><![CDATA[Linux常用命令 一些感想 测试]]></description>
-</item><item>
-    <title>第一次部署网站&amp;一些想法</title>
-    <link>https://firstincs.cn/first/</link>
-    <pubDate>Sun, 21 Nov 2021 00:00:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://firstincs.cn/first/</guid>
-    <description><![CDATA[第一次部署网站&amp;一些想法 一些废话 虽然这个标题叫“第一次部署网站”，但其实我私下里已经部署过另外一个博客了，所以实际上是第二次。之前部]]></description>
 </item></channel>
 </rss>

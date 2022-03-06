@@ -13,6 +13,7 @@ LeetCode 537，[题目链接点我](https://leetcode-cn.com/problems/complex-num
 $(a+bi)*(c+di)=(a*c-b*d)+(a*d+b*c)i$
 
 把分解运算的结果按照指定的字符串形式返回，代码如下：
+
 ```java
 class Solution {
     public String complexNumberMultiply(String num1, String num2) {

@@ -5,32 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Reading - 码代码</title><meta name="Description" content="一个软工在读研究生的网站;一朝红日出,依旧与天齐"><meta property="og:title" content="Reading" />
-<meta property="og:description" content="Linux常用命令 一些感想 测试" />
+        <title>[Leetcode 1356] 统计数字在二进制下1的数目排序 - 码代码</title><meta name="Description" content="一个软工在读研究生的网站;一朝红日出,依旧与天齐"><meta property="og:title" content="[Leetcode 1356] 统计数字在二进制下1的数目排序" />
+<meta property="og:description" content="LeetCode 1356，题目链接 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public int[] sortByBits(int[] arr) { // 巧妙的解法 // 利用java自身携带的统计函数 for(int i=0; i&lt;arr.length; i&#43;&#43;){ arr[i] = Integer.bitCount(arr[i]) * 1000000 &#43;" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://firstincs.cn/reading/" />
+<meta property="og:url" content="https://firstincs.cn/leetcode-1356/" />
 <meta property="og:image" content="https://firstincs.cn/images/avatar.png"/>
-<meta property="article:published_time" content="2021-12-04T21:24:15+08:00" />
-<meta property="article:modified_time" content="2021-12-04T21:24:15+08:00" />
+<meta property="article:published_time" content="2022-03-06T18:43:12+08:00" />
+<meta property="article:modified_time" content="2022-03-06T18:43:12+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://firstincs.cn/images/avatar.png"/>
 
-<meta name="twitter:title" content="Reading"/>
-<meta name="twitter:description" content="Linux常用命令 一些感想 测试"/>
+<meta name="twitter:title" content="[Leetcode 1356] 统计数字在二进制下1的数目排序"/>
+<meta name="twitter:description" content="LeetCode 1356，题目链接 代码如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 class Solution { public int[] sortByBits(int[] arr) { // 巧妙的解法 // 利用java自身携带的统计函数 for(int i=0; i&lt;arr.length; i&#43;&#43;){ arr[i] = Integer.bitCount(arr[i]) * 1000000 &#43;"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://firstincs.cn/reading/" /><link rel="prev" href="https://firstincs.cn/first/" /><link rel="next" href="https://firstincs.cn/condafix/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://firstincs.cn/leetcode-1356/" /><link rel="prev" href="https://firstincs.cn/offer-07/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Reading",
+        "headline": "[Leetcode 1356] 统计数字在二进制下1的数目排序",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/firstincs.cn\/reading\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  15 ,
-        "url": "https:\/\/firstincs.cn\/reading\/","datePublished": "2021-12-04T21:24:15+08:00","dateModified": "2021-12-04T21:24:15+08:00","publisher": {
+            "@id": "https:\/\/firstincs.cn\/leetcode-1356\/"
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  110 ,
+        "url": "https:\/\/firstincs.cn\/leetcode-1356\/","datePublished": "2022-03-06T18:43:12+08:00","dateModified": "2022-03-06T18:43:12+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -104,37 +104,68 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Reading</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">[Leetcode 1356] 统计数字在二进制下1的数目排序</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-04">2021-12-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 15 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-06">2022-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 110 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#测试">测试</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h1 id="linux常用命令">Linux常用命令</h1>
-<p>一些感想</p>
-<h2 id="测试">测试</h2>
-</div><div class="post-footer" id="post-footer">
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>LeetCode 1356，<a href="https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/" target="_blank" rel="noopener noreffer">题目链接</a></p>
+<p>代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">sortByBits</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// 巧妙的解法
+</span><span class="c1"></span>        <span class="c1">// 利用java自身携带的统计函数
+</span><span class="c1"></span>        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">bitCount</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">])</span> <span class="o">*</span> <span class="n">1000000</span> <span class="o">+</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="o">}</span>
+        <span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+        <span class="c1">// 排序完之后对数组进行取余操作，得到原来的数组
+</span><span class="c1"></span>        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">%</span> <span class="n">1000000</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">arr</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-12-04</span>
+                <span>更新于 2022-03-06</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/reading/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/leetcode-1356/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/reading/" data-title="Reading"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/reading/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/reading/" data-title="Reading" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/reading/" data-title="Reading"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/reading/" data-title="Reading"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/reading/" data-title="Reading" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/reading/" data-title="Reading" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/reading/" data-title="Reading"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/leetcode-1356/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/leetcode-1356/" data-title="[Leetcode 1356] 统计数字在二进制下1的数目排序"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -146,8 +177,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/first/" class="prev" rel="prev" title="第一次部署网站&amp;一些想法"><i class="fas fa-angle-left fa-fw"></i>第一次部署网站&amp;一些想法</a>
-            <a href="/condafix/" class="next" rel="next" title="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.">conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/offer-07/" class="prev" rel="prev" title="面试题 02.07 链表相交"><i class="fas fa-angle-left fa-fw"></i>面试题 02.07 链表相交</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
