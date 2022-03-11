@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2793 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2852 ,
         "url": "https:\/\/firstincs.cn\/docker\/","datePublished": "2021-12-05T14:04:54+08:00","dateModified": "2021-12-05T14:04:54+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2793 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2852 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -240,12 +240,13 @@ docker rmi -f 镜像名1：tag 镜像名2：tag
 对部分容器重新命名</p>
 </li>
 <li>
-<p>启动容器</p>
+<p>启动容器
+当一个容器关闭后要想重新启动时，采用start命令
+<code>docker start 容器ID或者容器名</code></p>
 </li>
-</ul>
-<p><code>docker start 容器ID或者容器名</code></p>
-<ul>
-<li>退出容器</li>
+<li>
+<p>退出容器</p>
+</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -304,10 +305,11 @@ stop 温柔一些的停止</p>
 <p>查看容器内部细节
 <code>docker inspect 容器id</code></p>
 <ul>
-<li>重新进入容器内环境
-退出后进入容器，exec和attach的区别
-attach</li>
+<li>重新进入容器内环境</li>
 </ul>
+<p>此时的容器正在运行中，如果需要进入则采用<code>exec</code>和<code>attach</code>命令。</p>
+<p>退出后进入容器，exec和attach的区别
+attach</p>
 <blockquote>
 <p>进入已经启动的容器终端，不会启动新的进程
 <code>docker attach 容器id</code>

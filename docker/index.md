@@ -81,7 +81,7 @@ docker run
 对部分容器重新命名
 
 - 启动容器
-
+  当一个容器关闭后要想重新启动时，采用start命令
 `docker start 容器ID或者容器名`
 
 - 退出容器
@@ -127,6 +127,9 @@ docker run
 `docker inspect 容器id`
 
 - 重新进入容器内环境
+
+此时的容器正在运行中，如果需要进入则采用`exec`和`attach`命令。
+
 退出后进入容器，exec和attach的区别
 attach
 > 进入已经启动的容器终端，不会启动新的进程
