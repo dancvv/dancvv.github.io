@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>3.11 面试小总结 - 码代码</title><meta name="Description" content="一个软工在读研究生的网站;一朝红日出,依旧与天齐"><meta property="og:title" content="3.11 面试小总结" />
-<meta property="og:description" content="今天接到了一个电话，说明来意之后我还以为会挪到下周去，还在想会周几面好呢。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面试" />
+<meta property="og:description" content="今天接到了一个面试电话，说明来意之后，我还以为应该安排到下周，还在想周几面。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://firstincs.cn/reviewithjd/" />
 <meta property="og:image" content="https://firstincs.cn/images/avatar.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://firstincs.cn/images/avatar.png"/>
 
 <meta name="twitter:title" content="3.11 面试小总结"/>
-<meta name="twitter:description" content="今天接到了一个电话，说明来意之后我还以为会挪到下周去，还在想会周几面好呢。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面试"/>
+<meta name="twitter:description" content="今天接到了一个面试电话，说明来意之后，我还以为应该安排到下周，还在想周几面。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/reviewithjd\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  1899 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2015 ,
         "url": "https:\/\/firstincs.cn\/reviewithjd\/","datePublished": "2022-03-11T16:37:33+08:00","dateModified": "2022-03-11T16:37:33+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,15 +106,15 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">3.11 面试小总结</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-11">2022-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1899 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-11">2022-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2015 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>今天接到了一个电话，说明来意之后我还以为会挪到下周去，还在想会周几面好呢。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面试官给我提出的问题，问题都挺简单的，但是架不住我菜啊。Q为question，A为answer。</p>
+            </div><div class="content" id="content"><p>今天接到了一个面试电话，说明来意之后，我还以为应该安排到下周，还在想周几面。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面试官给我提出的问题，问题都挺简单的，但是架不住我菜啊。Q为question，A为answer。</p>
 <p>Q：Java为什么要少用String的连接操作，尽量少用String类型</p>
 <blockquote>
 <p>A：使用+连接字符串每次都生成新的对象，而且是在堆内存上进行，而堆内存速度比较慢(相对而言)，那么再大量连接字符串时直接+是不可取的，当然需要一种效率高的方法。Java提供的StringBuffer和StringBuilder就是解决这个问题的。区别是前者是线程安全的而后者是非线程安全的。此外，值得注意的一点是，驻留池是不会被GC回收的，它会在程序运行期间一直保留。
@@ -169,6 +169,10 @@ JVM的分区可分为三个：堆（heap）、栈（stack）和方法区（metho
 <p>又称为‘静态区’，和堆一样，被所有的线程共享。</p>
 <p>方法区包含所有的class和static变量。</p>
 <p>Q：Java垃圾回收机制(GC)</p>
+<p>Q：HotSpot为什么要分为新生代和老年代？</p>
+<blockquote>
+<p>因为有的对象寿命长，有的对象寿命短。应该将寿命长的对象放在一个区，寿命短的对象放在一个区。不同的区采用不同的垃圾收集算法。寿命短的区清理频次高一点，寿命长的区清理频次低一点。提高效率。</p>
+</blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
