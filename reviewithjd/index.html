@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/reviewithjd\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2015 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  2859 ,
         "url": "https:\/\/firstincs.cn\/reviewithjd\/","datePublished": "2022-03-11T16:37:33+08:00","dateModified": "2022-03-11T16:37:33+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">3.11 面试小总结</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-11">2022-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2015 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-11">2022-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2859 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -169,10 +169,31 @@ JVM的分区可分为三个：堆（heap）、栈（stack）和方法区（metho
 <p>又称为‘静态区’，和堆一样，被所有的线程共享。</p>
 <p>方法区包含所有的class和static变量。</p>
 <p>Q：Java垃圾回收机制(GC)</p>
+<blockquote>
+<p>垃圾回收(Garbage Collection)是Java虚拟机(JVM)垃圾回收器提供的一种用于在空闲时间不定时回收无任何对象引用的对象占据的内存空间的一种机制。
+垃圾回收主要有四种算法，分别是标记-清除、标记-复制、标记-整理和分代收集。
+<strong>标记-收集</strong>
+顾名思义，标记-清除算法分为两个阶段，标记(mark)和清除(sweep)。
+标记：遍历所有的GC Roots，然后将所有的GC Roots可达的对象标记为存活的对象。
+清除：清除的过程将遍历所有堆中的对象，将没有标记的对象全部清除。
+这个算法是遍历所有内存，进行标记清理后会出现内存地址不连续，出现垃圾碎片
+<strong>标记-复制</strong>
+复制算法将内存分为两个区间,这两个区间是动态的，在任意一个时间点，所有分配的对象内存只能在其中一个区间（活动区间），另外一个区间就是空闲区间。
+当有效内存空间耗尽时，JVM将暂停程序运行，开启复制算法GC线程。GC线程会将活动空间内的，全部复制到空闲区间，且严格按照内存地址一次排列，与此同时，GC线程将更新存活对象的内存引用地址指向新的内存地址。
+缺点是空出一半的空间。
+<strong>标记-整理</strong>
+标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。
+优点明显，解决清除算法内存分散，弥补复制算法内存减半；缺点也很明显，多了一部分整理工作。
+<strong>分代收集</strong>
+一般将 java 堆分为新生代和老年代，这样我们就可以根据各个年代的特点选择合适的垃圾收集算法。
+比如在新生代中，每次收集都会有大量对象死去，所以可以选择”标记-复制“算法，只需要付出少量对象的复制成本就可以完成每次垃圾收集。而老年代的对象存活几率是比较高的，而且没有额外的空间对它进行分配担保，所以我们必须选择“标记-清除”或“标记-整理”算法进行垃圾收集。</p>
+</blockquote>
 <p>Q：HotSpot为什么要分为新生代和老年代？</p>
 <blockquote>
 <p>因为有的对象寿命长，有的对象寿命短。应该将寿命长的对象放在一个区，寿命短的对象放在一个区。不同的区采用不同的垃圾收集算法。寿命短的区清理频次高一点，寿命长的区清理频次低一点。提高效率。</p>
 </blockquote>
+<p>这一次的面试以我毫无准备的状态结束，我自己都知道面试结果极差，基本问一个不会一个，面试官估计都无语了，就这还研究生。</p>
+<p>上面的答案均整理自互联网，如有侵权，请联系我删除。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
