@@ -4,9 +4,16 @@
         <link>https://firstincs.cn/</link>
         <description>一个软工在读研究生的网站;一朝红日出,依旧与天齐</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Tue, 15 Mar 2022 19:56:19 &#43;0800</lastBuildDate>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Wed, 16 Mar 2022 21:41:24 &#43;0800</lastBuildDate>
             <atom:link href="https://firstincs.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>蔚来一面二面总结</title>
+    <link>https://firstincs.cn/reviewithft/</link>
+    <pubDate>Wed, 16 Mar 2022 21:41:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/reviewithft/</guid>
+    <description><![CDATA[之前失败的面试让我在面试前提前准备了一下，这一次的面试还好，一面的问题基本都知道，面试官给的题也不是特别难，写一下就能弄出来。二面就难一些了]]></description>
+</item><item>
     <title>蚂蚁安全和快手的面经</title>
     <link>https://firstincs.cn/reviewithant/</link>
     <pubDate>Tue, 15 Mar 2022 19:56:19 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-537/</guid>
     <description><![CDATA[LeetCode 537，题目链接点我 这个题涉及到数学中复变函数的运算，也很简单，没有涉及到复杂运算，仅实现复数乘法。它的难处在于如何让两个字符串实现乘法运]]></description>
-</item><item>
-    <title>[LeetCode 1706] 球会落何处</title>
-    <link>https://firstincs.cn/leetcode-1706/</link>
-    <pubDate>Thu, 24 Feb 2022 20:44:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://firstincs.cn/leetcode-1706/</guid>
-    <description><![CDATA[LeetCode 1706，题目链接点我 拿到这个题之后，首先分析其限制条件。根据题意可以发现，球会在三个地方卡住，左右两侧的墙壁上，以及两侧挡板形成的V型槽]]></description>
 </item></channel>
 </rss>
