@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker-utils\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  193 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  1080 ,
         "url": "https:\/\/firstincs.cn\/docker-utils\/","datePublished": "2022-03-10T13:19:58+08:00","dateModified": "2022-03-10T13:19:58+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker安装常用的数据库</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-10">2022-03-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 193 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-10">2022-03-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1080 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -118,14 +118,136 @@
     <li><a href="#写在前面">写在前面</a></li>
     <li><a href="#mysql安装">MySQL安装</a></li>
     <li><a href="#mongodb安装">MongoDB安装</a></li>
-    <li><a href="#redis安装">Redis安装</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="写在前面">写在前面</h2>
-<p>在接触到Docker之后，发现他火起来不是没有道理的，极大的简化了安装过程，特别是本机还有一些老旧项目的数据库，但是又不能直接删掉弄新的。最近学习一个项目，需要安装各种数据，像MySQL，MongoDB之类的安装，只需要几个命令就能轻松搞起来。下面我会分章来讲解怎么利用Docker安装MySQL，MongoDB和Redis数据库。</p>
+<p>在接触到Docker之后，发现他火起来不是没有道理的，极大的简化了安装过程，特别是本机还有一些老旧项目的数据库，但是又不能直接删掉弄新的。最近学习一个项目，需要安装各种数据，像MySQL，MongoDB之类的安装，只需要几个命令就能轻松搞起来。下面我会分章来讲解怎么利用Docker安装MySQL和MongoDB。</p>
+<!-- 和Redis数据库。 -->
 <h2 id="mysql安装">MySQL安装</h2>
+<ol>
+<li>
+<p>选择版本
+选择需要安装的版本，可以直接在命令输入<code>docker search mysql</code>查询可用的版本，或者上docker hub上查询；</p>
+</li>
+<li>
+<p>拉取镜像
+默认拉去最新版本的镜像</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker pull mysql:latest<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>3.查看本地镜像
+使用<code>images</code>命令查看是否拉取下来：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker images<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>运行容器
+使用<code>run</code>命令运行MySQL容器：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker run -itd --name localsql -p 3306:3306 -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">123456</span> mysql<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>参数说明：</p>
+<ul>
+<li>-p 3306:3306 ：映射容器服务的 3306 端口到宿主机的 3306 端口，外部主机可以直接通过 宿主机ip:3306 访问到 MySQL 的服务。</li>
+<li>MYSQL_ROOT_PASSWORD=123456：设置 MySQL 服务 root 用户的密码。</li>
+</ul>
+<p>还可以做一个改进，如果直接在容器内存放数据，一旦容器被误删，数据在没有做备份的情况下直接就丢失了，所以docker使用容器卷技术进行数据分离，类似于共享的概念。添加数据卷命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker run -d --name localsql -v /data/mysql:/var/lib/mysql -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">123456</span> -p 3306:3306 mysql<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>检查运行进程
+运行完成之后使用<code>docker ps</code>检查使用成功运行。</li>
+</ol>
 <h2 id="mongodb安装">MongoDB安装</h2>
-<h2 id="redis安装">Redis安装</h2>
+<p>MongoDB的安装和MySQL的安装大同小异，因此下文对其具体操作进行简述，详细操作参照上节。</p>
+<ol>
+<li>
+<p>选择版本
+选择需要安装的版本，可以直接在命令输入`docker search mogond查询可用的版本，或者上docker hub上查询；</p>
+</li>
+<li>
+<p>拉取镜像
+默认拉去最新版本的镜像</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker pull mongo:latest<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>3.查看本地镜像
+使用<code>images</code>命令查看是否拉取下来：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker images<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>运行容器
+使用<code>run</code>命令运行MySQL容器：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker run -itd --name localmongo -p 27017:27017 -e mongo<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>参数说明：</p>
+<ul>
+<li>-p 3306:3306 ：映射容器服务的 3306 端口到宿主机的 3306 端口，外部主机可以直接通过 宿主机ip:3306 访问到 MySQL 的服务。</li>
+<li>MYSQL_ROOT_PASSWORD=123456：设置 MySQL 服务 root 用户的密码。</li>
+</ul>
+<p>还可以做一个改进，如果直接在容器内存放数据，一旦容器被误删，数据在没有做备份的情况下直接就丢失了，所以docker使用容器卷技术进行数据分离，类似于共享的概念。添加数据卷命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-docker" data-lang="docker">docker run -itd -p 27017:27017 -v /data/mongo:/data/db --name localmongo mongo<span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>在上面的命令中，几个命令参数的详细解释如下：</p>
+<ul>
+<li>-p 映射容器服务的 27017 端口到宿主机的 27017 端口。外部可以直接通过 宿主机 ip:27017 访问到 mongo 的服务</li>
+<li>-v 为设置容器的挂载目录，这里是将本机的“/data/mongo”目录挂载到容器中的/data/db中，作为 mongodb 的存储目录</li>
+</ul>
+<ol start="5">
+<li>检查运行进程
+运行完成之后使用<code>docker ps</code>检查使用成功运行。</li>
+</ol>
+<!-- ## Redis安装 -->
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
