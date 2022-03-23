@@ -4,30 +4,9 @@
         <link>https://firstincs.cn/</link>
         <description>一个软工在读研究生的网站;一朝红日出,依旧与天齐</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangvei@mail.dlut.edu.cn (DaWang coming)</managingEditor>
-            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Wed, 16 Mar 2022 21:41:24 &#43;0800</lastBuildDate>
+            <webMaster>wangvei@mail.dlut.edu.cn (DaWang coming)</webMaster><lastBuildDate>Thu, 10 Mar 2022 13:19:58 &#43;0800</lastBuildDate>
             <atom:link href="https://firstincs.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>蔚来一面二面总结</title>
-    <link>https://firstincs.cn/reviewithft/</link>
-    <pubDate>Wed, 16 Mar 2022 21:41:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://firstincs.cn/reviewithft/</guid>
-    <description><![CDATA[之前失败的面试让我在面试前提前准备了一下，这一次的面试还好，一面的问题基本都知道，面试官给的题也不是特别难，写一下就能弄出来。二面就难一些了]]></description>
-</item><item>
-    <title>蚂蚁安全和快手的面经</title>
-    <link>https://firstincs.cn/reviewithant/</link>
-    <pubDate>Tue, 15 Mar 2022 19:56:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://firstincs.cn/reviewithant/</guid>
-    <description><![CDATA[这又是一个突如其来的面试，这个是阿里蚂蚁安全部门的面试。后面回想起来一天经历两个面试，一时间有点吃不消，但是菜鸡无所畏惧。 我对这一次可以说是]]></description>
-</item><item>
-    <title>3.11 面试小总结</title>
-    <link>https://firstincs.cn/reviewithjd/</link>
-    <pubDate>Fri, 11 Mar 2022 16:37:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://firstincs.cn/reviewithjd/</guid>
-    <description><![CDATA[今天接到了一个面试电话，说明来意之后，我还以为应该安排到下周，还在想周几面。结果没想到要求立马面试，当场打了我一个措手不及。现在来复盘一下面]]></description>
-</item><item>
     <title>Docker安装常用的数据库</title>
     <link>https://firstincs.cn/docker-utils/</link>
     <pubDate>Thu, 10 Mar 2022 13:19:58 &#43;0800</pubDate>
@@ -76,5 +55,26 @@
     <author>作者</author>
     <guid>https://firstincs.cn/leetcode-537/</guid>
     <description><![CDATA[LeetCode 537，题目链接点我 这个题涉及到数学中复变函数的运算，也很简单，没有涉及到复杂运算，仅实现复数乘法。它的难处在于如何让两个字符串实现乘法运]]></description>
+</item><item>
+    <title>[LeetCode 1706] 球会落何处</title>
+    <link>https://firstincs.cn/leetcode-1706/</link>
+    <pubDate>Thu, 24 Feb 2022 20:44:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/leetcode-1706/</guid>
+    <description><![CDATA[LeetCode 1706，题目链接点我 拿到这个题之后，首先分析其限制条件。根据题意可以发现，球会在三个地方卡住，左右两侧的墙壁上，以及两侧挡板形成的V型槽]]></description>
+</item><item>
+    <title>SpringBoot生成OpenAPI 3.0文档</title>
+    <link>https://firstincs.cn/springdoc/</link>
+    <pubDate>Mon, 14 Feb 2022 00:04:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/springdoc/</guid>
+    <description><![CDATA[SpringBoot生成OpenAPI 3.0文档 概述 开发过程中需要写大量的接口文档，如果手写的话需要花费一定的时间，并且还需要额外的时间进行]]></description>
+</item><item>
+    <title>Docker笔记</title>
+    <link>https://firstincs.cn/docker/</link>
+    <pubDate>Sun, 05 Dec 2021 14:04:54 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://firstincs.cn/docker/</guid>
+    <description><![CDATA[Docker learning script Docker 目前存在多个国内镜像，以阿里云网易云为主，可以选定永久的和临时的。加速服务需要去对应的网站选择，随后按照步骤配置进入本机 配置文档位于]]></description>
 </item></channel>
 </rss>
