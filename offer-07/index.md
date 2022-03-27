@@ -1,6 +1,6 @@
-# 面试题 02.07 链表相交
+# 剑指offer 链表相交
 
-面试题 02.07 链表相交，[题目链接点我](https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/)
+剑指offer 链表相交，[题目链接点我](https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/)
 
 这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么我把一个链表的所有节点存到一个哈希表中，让后让第二个链表在遍历的同时，不停确认哈希表中是不是有这个节点，如果有，终止循环，找到节点，没有就返回null。
 

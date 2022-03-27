@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>面试题 02.07 链表相交 - 码代码</title><meta name="Description" content="一个软工在读研究生的网站;一朝红日出,依旧与天齐"><meta property="og:title" content="面试题 02.07 链表相交" />
-<meta property="og:description" content="面试题 02.07 链表相交，题目链接点我 这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么我把一" />
+        <title>剑指offer 链表相交 - 码代码</title><meta name="Description" content="一个软工在读研究生的网站;一朝红日出,依旧与天齐"><meta property="og:title" content="剑指offer 链表相交" />
+<meta property="og:description" content="剑指offer 链表相交，题目链接点我 这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://firstincs.cn/offer-07/" />
 <meta property="og:image" content="https://firstincs.cn/images/avatar.png"/>
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://firstincs.cn/images/avatar.png"/>
 
-<meta name="twitter:title" content="面试题 02.07 链表相交"/>
-<meta name="twitter:description" content="面试题 02.07 链表相交，题目链接点我 这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么我把一"/>
+<meta name="twitter:title" content="剑指offer 链表相交"/>
+<meta name="twitter:description" content="剑指offer 链表相交，题目链接点我 这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,12 +24,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "面试题 02.07 链表相交",
+        "headline": "剑指offer 链表相交",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/offer-07\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  535 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  538 ,
         "url": "https:\/\/firstincs.cn\/offer-07\/","datePublished": "2022-03-02T10:41:05+08:00","dateModified": "2022-03-02T10:41:05+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,9 +104,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">面试题 02.07 链表相交</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">剑指offer 链表相交</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-02">2022-03-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 535 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-02">2022-03-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 538 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -114,7 +114,7 @@
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>面试题 02.07 链表相交，<a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/" target="_blank" rel="noopener noreffer">题目链接点我</a></p>
+            </div><div class="content" id="content"><p>剑指offer 链表相交，<a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/" target="_blank" rel="noopener noreffer">题目链接点我</a></p>
 <p>这个题我先用了最耗时的方法做，既然是让最第一个相交的节点，也就是说，找到第一个相等的点。既然是相等，那么我把一个链表的所有节点存到一个哈希表中，让后让第二个链表在遍历的同时，不停确认哈希表中是不是有这个节点，如果有，终止循环，找到节点，没有就返回null。</p>
 <p>代码如下：</p>
 <div class="highlight"><div class="chroma">
@@ -210,7 +210,7 @@
                             <a class="link-to-markdown" href="/offer-07/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/offer-07/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/offer-07/" data-title="面试题 02.07 链表相交"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://firstincs.cn/offer-07/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://firstincs.cn/offer-07/" data-title="剑指offer 链表相交"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
