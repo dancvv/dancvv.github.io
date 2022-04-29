@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/firstincs.cn\/docker-utils\/"
-        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  1080 ,
+        },"image": ["https:\/\/firstincs.cn\/images\/avatar.png"],"genre": "posts","wordcount":  1110 ,
         "url": "https:\/\/firstincs.cn\/docker-utils\/","datePublished": "2022-03-10T13:19:58+08:00","dateModified": "2022-03-10T13:19:58+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Docker安装常用的数据库</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="firstincs.cn" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>DaWang coming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-10">2022-03-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1080 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-10">2022-03-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1110 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -118,6 +118,7 @@
     <li><a href="#写在前面">写在前面</a></li>
     <li><a href="#mysql安装">MySQL安装</a></li>
     <li><a href="#mongodb安装">MongoDB安装</a></li>
+    <li><a href="#redis安装">Redis安装</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="写在前面">写在前面</h2>
@@ -247,8 +248,17 @@
 <li>检查运行进程
 运行完成之后使用<code>docker ps</code>检查使用成功运行。</li>
 </ol>
-<!-- ## Redis安装 -->
-</div><div class="post-footer" id="post-footer">
+<h2 id="redis安装">Redis安装</h2>
+<p>使用命令挂载数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">docker run -p 6100:6379 --name redis -v /Users/weivang/DataVolume/redis/redis.conf:/etc/redis/redis.conf -d redis redis-server /etc/redis/redis.conf --appendonly yes
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

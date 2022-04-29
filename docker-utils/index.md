@@ -76,6 +76,11 @@ docker run -itd -p 27017:27017 -v /data/mongo:/data/db --name localmongo mongo
 5. 检查运行进程
 运行完成之后使用`docker ps`检查使用成功运行。
 
-<!-- ## Redis安装 -->
+## Redis安装
+
+使用命令挂载数据
+```shell
+docker run -p 6100:6379 --name redis -v /Users/weivang/DataVolume/redis/redis.conf:/etc/redis/redis.conf -d redis redis-server /etc/redis/redis.conf --appendonly yes
+```
 
 
