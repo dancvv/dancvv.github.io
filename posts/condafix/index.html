@@ -1,0 +1,1529 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete. &middot; Luobottle</title>
+    <meta name="title" content="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete. &middot; Luobottle">
+  
+
+  
+  
+    <meta name="description" content="个人博客 - 技术分享与生活记录">
+  
+  
+    <meta name="keywords" content="Python,Conda,问题解决,环境配置,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/condafix/">
+  
+
+  
+  
+    <meta name="author" content="Luobottle">
+  
+  
+    
+      
+        
+          <link href="https://github.com/dancvv" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/condafix/">
+  <meta property="og:site_name" content="Luobottle">
+  <meta property="og:title" content="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.">
+  <meta property="og:description" content="个人博客 - 技术分享与生活记录">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-12-05T10:51:14+08:00">
+    <meta property="article:modified_time" content="2021-12-05T10:51:14+08:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Conda">
+    <meta property="article:tag" content="问题解决">
+    <meta property="article:tag" content="环境配置">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.">
+  <meta name="twitter:description" content="个人博客 - 技术分享与生活记录">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.f3ba2b4e9263b1dd20cfcf6fee97bb5cd7f04995c67653f770a9d0fcf36d2ac2396def11ae2617b691eb6f92c6dec36b2fb0f25e2ad48f418c92e15ff26b536d.css"
+    integrity="sha512-87orTpJjsd0gz89v7pe7XNfwSZXGdlP3cKnQ/PNtKsI5be8RriYXtpHrb5LG3sNrL7DyXirUj0GMkuFf8mtTbQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+    
+    <script src="/js/a11y.min.7eeed9f7a6fe7c8aa3b999966484369eb1b5380455116fc15c2b407140f3c2e3b174fc00201797dba34e4d4013213736ae375c9bcf2d7ad1fadb224355d8d54d.js" integrity="sha512-fu7Z96b&#43;fIqjuZmWZIQ2nrG1OARVEW/BXCtAcUDzwuOxdPwAIBeX26NOTUATITc2rjdcm88tetH62yJDVdjVTQ=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.",
+    "headline": "conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.",
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/posts/condafix/",
+    "author" : {
+      "@type": "Person",
+      "name": "Luobottle"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-12-05T10:51:14\u002b08:00",
+    "datePublished": "2021-12-05T10:51:14\u002b08:00",
+    
+    "dateModified": "2021-12-05T10:51:14\u002b08:00",
+    
+    "keywords": ["Python","Conda","问题解决","环境配置"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "598"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl backdrop-saturate-220 backdrop-brightness-112 dark:backdrop-saturate-180 dark:backdrop-brightness-95 bg-primary-200/80 bg-linear-60 dark:bg-primary-800/30 shadow-xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Luobottle
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="首页"
+      title="欢迎来到 Luobottle 的博客">
+      
+      
+        <span class="text-base font-medium break-normal">
+          首页
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="随笔"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          随笔
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="标签"
+      title="Tags">
+      
+      
+        <span class="text-base font-medium break-normal">
+          标签
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="分类"
+      title="Categories">
+      
+      
+        <span class="text-base font-medium break-normal">
+          分类
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+    <div class="flex items-center">
+  <button
+    id="desktop-a11y-toggle"
+    aria-label="Open accessibility panel"
+    aria-expanded="false"
+    type="button"
+    class="bf-icon-color-hover"
+    role="button"
+    aria-pressed="false">
+    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+  </button>
+
+  <div id="desktop-a11y-overlay" class="fixed inset-0 hidden" style="z-index:9999;"></div>
+
+  <div
+    id="desktop-a11y-panel"
+    role="dialog"
+    aria-labelledby="desktop-a11y-panel-title"
+    class="a11y-panel-enter fixed hidden p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700"
+    style="min-width: 20rem; z-index:9999;">
+    <div class="flex items-center justify-between mb-6">
+      <h3
+        id="desktop-a11y-panel-title"
+        class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        无障碍设定
+      </h3>
+      <button
+        id="desktop-a11y-close"
+        class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+        aria-label="Close a11y panel">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="space-y-5">
+      
+      
+      
+      
+        
+      
+      
+        
+      
+        <div class="flex items-center justify-between">
+          <label for="desktop-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            禁用模糊效果
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="desktop-disable-blur">
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="desktop-disable-images" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            禁用背景图片
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="desktop-disable-images">
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="desktop-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            显示链接下划线
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="desktop-underline-links">
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="desktop-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            啟用阅读模式
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="desktop-zen-mode">
+          </div>
+        </div>
+
+
+      <div class="flex items-center justify-between">
+        <label
+          for="desktop-font-size-select"
+          class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          字体大小
+        </label>
+        <select
+          id="desktop-font-size-select"
+          class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+          
+          
+            <option value="default">default</option>
+          
+            <option value="12px">12px</option>
+          
+            <option value="14px">14px</option>
+          
+            <option value="16px">16px</option>
+          
+            <option value="18px">18px</option>
+          
+            <option value="20px">20px</option>
+          
+            <option value="22px">22px</option>
+          
+            <option value="24px">24px</option>
+          
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="搜索 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="首页"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="欢迎来到 Luobottle 的博客" class="text-2xl font-bold tracking-tight">
+          首页
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="随笔"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          随笔
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="标签"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          标签
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="分类"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Categories" class="text-2xl font-bold tracking-tight">
+          分类
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+    <div
+      class="flex flex-wrap items-center [&_span]:text-2xl [&_.translation_button_.icon]:text-4xl! [&_.translation_button_span]:text-base! [&_.translation_.menuhide_span]:text-sm! gap-x-6 ps-2 mt-8 pt-8 border-t bf-border-color">
+      
+
+
+      
+        <div class="flex items-center">
+  <button
+    id="mobile-menu-a11y-toggle"
+    aria-label="Open accessibility panel"
+    aria-expanded="false"
+    type="button"
+    class="bf-icon-color-hover"
+    role="button"
+    aria-pressed="false">
+    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+  </button>
+
+  <div id="mobile-menu-a11y-overlay" class="fixed inset-0 hidden" style="z-index:9999;"></div>
+
+  <div
+    id="mobile-menu-a11y-panel"
+    role="dialog"
+    aria-labelledby="mobile-menu-a11y-panel-title"
+    class="a11y-panel-enter fixed hidden p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700"
+    style="min-width: 20rem; z-index:9999;">
+    <div class="flex items-center justify-between mb-6">
+      <h3
+        id="mobile-menu-a11y-panel-title"
+        class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+        无障碍设定
+      </h3>
+      <button
+        id="mobile-menu-a11y-close"
+        class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+        aria-label="Close a11y panel">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="space-y-5">
+      
+      
+      
+      
+        
+      
+      
+        
+      
+        <div class="flex items-center justify-between">
+          <label for="mobile-menu-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            禁用模糊效果
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="mobile-menu-disable-blur">
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="mobile-menu-disable-images" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            禁用背景图片
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="mobile-menu-disable-images">
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="mobile-menu-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            显示链接下划线
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="mobile-menu-underline-links">
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <label for="mobile-menu-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            啟用阅读模式
+          </label>
+          <div class="ios-toggle">
+            <input type="checkbox" id="mobile-menu-zen-mode">
+          </div>
+        </div>
+
+
+      <div class="flex items-center justify-between">
+        <label
+          for="mobile-menu-font-size-select"
+          class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          字体大小
+        </label>
+        <select
+          id="mobile-menu-font-size-select"
+          class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+          
+          
+            <option value="default">default</option>
+          
+            <option value="12px">12px</option>
+          
+            <option value="14px">14px</option>
+          
+            <option value="16px">16px</option>
+          
+            <option value="18px">18px</option>
+          
+            <option value="20px">20px</option>
+          
+            <option value="22px">22px</option>
+          
+            <option value="24px">24px</option>
+          
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        conda报错：An unexpected error has occurred. Conda has prepared the above report. Upload did not complete.
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-12-05T10:51:14&#43;08:00">2021年12月05日</time><span class="px-2 text-primary-500">&middot;</span><span>598 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    问题解决
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/python/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Python
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/conda/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Conda
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    问题解决
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    环境配置
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Luobottle
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">热爱技术,喜欢分享</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/dancvv"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题复现">问题复现</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题复现">问题复现</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">创建conda环境，激活其他虚拟环境时报错
+    <div id="创建conda环境激活其他虚拟环境时报错" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%9b%e5%bb%baconda%e7%8e%af%e5%a2%83%e6%bf%80%e6%b4%bb%e5%85%b6%e4%bb%96%e8%99%9a%e6%8b%9f%e7%8e%af%e5%a2%83%e6%97%b6%e6%8a%a5%e9%94%99" aria-label="锚点">#</a>
+    </span>
+    
+</h1>
+<p>今天本来正常从github找到一个项目，打算按照常规操作跑起来看看结果，结果一下子出现一堆报错，一下子慌了神，bing（必应）了半天总算找到症结所在。</p>
+
+<h2 class="relative group">问题复现
+    <div id="问题复现" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%97%ae%e9%a2%98%e5%a4%8d%e7%8e%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>创建环境、切换环境时，出现以下报错信息：</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">&gt;</span><span class="n">conda</span> <span class="n">create</span> <span class="n">-n</span> <span class="n">na</span> <span class="n">python</span><span class="p">=</span><span class="mf">3.6</span>
+</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">package</span> <span class="n">metadata</span> <span class="p">(</span><span class="n">current_repodata</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="err">:</span> <span class="n">failed</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; ERROR REPORT &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\exceptions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">1079</span><span class="p">,</span> <span class="k">in</span> <span class="n">__call__</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">func</span><span class="p">(*</span><span class="n">args</span><span class="p">,</span> <span class="p">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\main.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">84</span><span class="p">,</span> <span class="k">in</span> <span class="n">_main</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exit_code</span> <span class="p">=</span> <span class="n">do_call</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\conda_argparse.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">83</span><span class="p">,</span> <span class="k">in</span> <span class="n">do_call</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">func_name</span><span class="p">)(</span><span class="n">args</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\main_create.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">41</span><span class="p">,</span> <span class="k">in</span> <span class="n">execute</span>
+</span></span><span class="line"><span class="cl">        <span class="n">install</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">parser</span><span class="p">,</span> <span class="s1">&#39;create&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\cli\install.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">261</span><span class="p">,</span> <span class="k">in</span> <span class="n">install</span>
+</span></span><span class="line"><span class="cl">        <span class="n">unlink_link_transaction</span> <span class="p">=</span> <span class="n">solver</span><span class="p">.</span><span class="py">solve_for_transaction</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">114</span><span class="p">,</span> <span class="k">in</span> <span class="n">solve_for_transaction</span>
+</span></span><span class="line"><span class="cl">        <span class="n">unlink_precs</span><span class="p">,</span> <span class="n">link_precs</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">solve_for_diff</span><span class="p">(</span><span class="n">update_modifier</span><span class="p">,</span> <span class="n">deps_modifier</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">157</span><span class="p">,</span> <span class="k">in</span> <span class="n">solve_for_diff</span>
+</span></span><span class="line"><span class="cl">        <span class="n">final_precs</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">solve_final_state</span><span class="p">(</span><span class="n">update_modifier</span><span class="p">,</span> <span class="n">deps_modifier</span><span class="p">,</span> <span class="n">prune</span><span class="p">,</span> <span class="n">ignore_pinned</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">262</span><span class="p">,</span> <span class="k">in</span> <span class="n">solve_final_state</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssc</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">_collect_all_metadata</span><span class="p">(</span><span class="n">ssc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\common\io.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">88</span><span class="p">,</span> <span class="k">in</span> <span class="n">decorated</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">(*</span><span class="n">args</span><span class="p">,</span> <span class="p">**</span><span class="n">kwds</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">425</span><span class="p">,</span> <span class="k">in</span> <span class="n">_collect_all_metadata</span>
+</span></span><span class="line"><span class="cl">        <span class="n">index</span><span class="p">,</span> <span class="nb">r </span><span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">_prepare</span><span class="p">(</span><span class="n">prepared_specs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\solve.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">1020</span><span class="p">,</span> <span class="k">in</span> <span class="n">_prepare</span>
+</span></span><span class="line"><span class="cl">        <span class="n">reduced_index</span> <span class="p">=</span> <span class="n">get_reduced_index</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">prefix</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">channels</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\index.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">288</span><span class="p">,</span> <span class="k">in</span> <span class="n">get_reduced_index</span>
+</span></span><span class="line"><span class="cl">        <span class="n">new_records</span> <span class="p">=</span> <span class="n">SubdirData</span><span class="p">.</span><span class="py">query_all</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">channels</span><span class="p">=</span><span class="n">channels</span><span class="p">,</span> <span class="n">subdirs</span><span class="p">=</span><span class="n">subdirs</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">140</span><span class="p">,</span> <span class="k">in</span> <span class="n">query_all</span>
+</span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="p">=</span> <span class="n">tuple</span><span class="p">(</span><span class="n">concat</span><span class="p">(</span><span class="n">executor</span><span class="p">.</span><span class="py">map</span><span class="p">(</span><span class="n">subdir_query</span><span class="p">,</span> <span class="n">channel_urls</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">611</span><span class="p">,</span> <span class="k">in</span> <span class="n">result_iterator</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yield</span> <span class="n">fs</span><span class="p">.</span><span class="py">pop</span><span class="p">().</span><span class="py">result</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">439</span><span class="p">,</span> <span class="k">in</span> <span class="n">result</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="py">__get_result</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">388</span><span class="p">,</span> <span class="k">in</span> <span class="n">__get_result</span>
+</span></span><span class="line"><span class="cl">        <span class="n">raise</span> <span class="n">self</span><span class="p">.</span><span class="py">_exception</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\concurrent\futures\thread.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">57</span><span class="p">,</span> <span class="k">in</span> <span class="n">run</span>
+</span></span><span class="line"><span class="cl">        <span class="n">result</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">fn</span><span class="p">(*</span><span class="n">self</span><span class="p">.</span><span class="n">args</span><span class="p">,</span> <span class="p">**</span><span class="n">self</span><span class="p">.</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">132</span><span class="p">,</span> <span class="k">in</span> <span class="p">&lt;</span><span class="n">lambda</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">subdir_query</span> <span class="p">=</span> <span class="n">lambda</span> <span class="n">url</span><span class="err">:</span> <span class="n">tuple</span><span class="p">(</span><span class="n">SubdirData</span><span class="p">(</span><span class="n">Channel</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="n">repodata_fn</span><span class="p">=</span><span class="n">repodata_fn</span><span class="p">).</span><span class="py">query</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">145</span><span class="p">,</span> <span class="k">in</span> <span class="n">query</span>
+</span></span><span class="line"><span class="cl">        <span class="n">self</span><span class="p">.</span><span class="py">load</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">209</span><span class="p">,</span> <span class="k">in</span> <span class="n">load</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_internal_state</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">_load</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">371</span><span class="p">,</span> <span class="k">in</span> <span class="n">_load</span>
+</span></span><span class="line"><span class="cl">        <span class="n">raw_repodata_str</span> <span class="p">=</span> <span class="n">fetch_repodata_remote_request</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\conda\core\subdir_data.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">694</span><span class="p">,</span> <span class="k">in</span> <span class="n">fetch_repodata_remote_request</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resp</span> <span class="p">=</span> <span class="n">session</span><span class="p">.</span><span class="py">get</span><span class="p">(</span><span class="n">join_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span> <span class="n">headers</span><span class="p">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">proxies</span><span class="p">=</span><span class="n">session</span><span class="p">.</span><span class="n">proxies</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\sessions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">555</span><span class="p">,</span> <span class="k">in</span> <span class="n">get</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="py">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="p">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\sessions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">542</span><span class="p">,</span> <span class="k">in</span> <span class="n">request</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resp</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="p">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\sessions.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">655</span><span class="p">,</span> <span class="k">in</span> <span class="n">send</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">r </span><span class="p">=</span> <span class="n">adapter</span><span class="p">.</span><span class="py">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="p">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\requests\adapters.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">439</span><span class="p">,</span> <span class="k">in</span> <span class="n">send</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resp</span> <span class="p">=</span> <span class="n">conn</span><span class="p">.</span><span class="py">urlopen</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connectionpool.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">696</span><span class="p">,</span> <span class="k">in</span> <span class="n">urlopen</span>
+</span></span><span class="line"><span class="cl">        <span class="n">self</span><span class="p">.</span><span class="py">_prepare_proxy</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connectionpool.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">964</span><span class="p">,</span> <span class="k">in</span> <span class="n">_prepare_proxy</span>
+</span></span><span class="line"><span class="cl">        <span class="n">conn</span><span class="p">.</span><span class="py">connect</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connection.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">359</span><span class="p">,</span> <span class="k">in</span> <span class="n">connect</span>
+</span></span><span class="line"><span class="cl">        <span class="n">conn</span> <span class="p">=</span> <span class="n">self</span><span class="p">.</span><span class="py">_connect_tls_proxy</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\connection.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">500</span><span class="p">,</span> <span class="k">in</span> <span class="n">_connect_tls_proxy</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ssl_wrap_socket</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\util\ssl_.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">432</span><span class="p">,</span> <span class="k">in</span> <span class="n">ssl_wrap_socket</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssl_sock</span> <span class="p">=</span> <span class="n">_ssl_wrap_socket_impl</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">tls_in_tls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\site-packages\urllib3\util\ssl_.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">474</span><span class="p">,</span> <span class="k">in</span> <span class="n">_ssl_wrap_socket_impl</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ssl_context</span><span class="p">.</span><span class="py">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\ssl.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">500</span><span class="p">,</span> <span class="k">in</span> <span class="n">wrap_socket</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="py">sslsocket_class</span><span class="p">.</span><span class="py">_create</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">File</span> <span class="s2">&#34;D:\ProgramData\Anaconda3\lib\ssl.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mf">997</span><span class="p">,</span> <span class="k">in</span> <span class="n">_create</span>
+</span></span><span class="line"><span class="cl">        <span class="n">raise</span> <span class="n">ValueError</span><span class="p">(</span><span class="s2">&#34;check_hostname requires server_hostname&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ValueError</span><span class="err">:</span> <span class="n">check_hostname</span> <span class="n">requires</span> <span class="n">server_hostname</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">`$</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="nb">conda-script</span><span class="p">.</span><span class="py">py</span> <span class="n">create</span> <span class="n">-n</span> <span class="n">na</span> <span class="n">python</span><span class="p">=</span><span class="mf">3.6</span><span class="p">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">environment</span> <span class="n">variables</span><span class="err">:</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">CIO_TEST</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">CONDA_DEFAULT_ENV</span><span class="p">=</span><span class="n">tmc</span>
+</span></span><span class="line"><span class="cl">                <span class="n">CONDA_EXE</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">condabin</span><span class="p">\..\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">conda</span><span class="p">.</span><span class="py">exe</span>
+</span></span><span class="line"><span class="cl">               <span class="n">CONDA_EXES</span><span class="p">=</span><span class="s2">&#34;D:\ProgramData\Anaconda3\condabin\..\Scripts\conda.exe&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="n">CONDA_PREFIX</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span>
+</span></span><span class="line"><span class="cl">           <span class="n">CONDA_PREFIX_1</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CONDA_PROMPT_MODIFIER</span><span class="p">=(</span><span class="n">tmc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="n">CONDA_PYTHON_EXE</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="py">exe</span>
+</span></span><span class="line"><span class="cl">               <span class="n">CONDA_ROOT</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span>
+</span></span><span class="line"><span class="cl">              <span class="n">CONDA_SHLVL</span><span class="p">=</span><span class="mf">2</span>
+</span></span><span class="line"><span class="cl">           <span class="n">CURL_CA_BUNDLE</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">HOMEPATH</span><span class="p">=\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span>
+</span></span><span class="line"><span class="cl">                <span class="n">NODE_PATH</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">nodejs</span><span class="p">\</span><span class="n">node_modules</span>
+</span></span><span class="line"><span class="cl">                     <span class="n">PATH</span><span class="p">=</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="nb">mingw-w64</span><span class="p">\</span><span class="n">bi</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">n</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Li</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">brary</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">bi</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">n</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Library</span><span class="p">\</span><span class="nb">mingw-w64</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">usr</span><span class="p">\</span><span class="n">bi</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">n</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">Library</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anacond</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">a3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramDa</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">ta</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">condabin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Python38</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Files</span><span class="p">\</span><span class="n">Python38</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Eclipse</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Adoptium</span><span class="p">\</span><span class="n">jdk</span><span class="p">-</span><span class="mf">8.0</span><span class="p">.</span><span class="py">312</span><span class="p">.</span><span class="mf">7</span><span class="n">-hotspot</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Eclipse</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Foundation</span><span class="p">\</span><span class="n">jdk</span><span class="p">-</span><span class="mf">11.0</span><span class="p">.</span><span class="py">12</span><span class="p">.</span><span class="mf">7</span><span class="n">-hotspot</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span>
+</span></span><span class="line"><span class="cl">                          <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="n">VMware</span><span class="p">\</span><span class="n">VMware</span> <span class="n">Workstation</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span> <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="n">Common</span> <span class="n">File</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">s</span><span class="p">\</span><span class="n">Oracle</span><span class="p">\</span><span class="n">Java</span><span class="p">\</span><span class="n">javapath</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Oracle</span><span class="p">\</span><span class="n">Java</span><span class="p">\</span><span class="n">javapath</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">system32</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="n">Wbem</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="n">Windo</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">wsPowerShell</span><span class="p">\</span><span class="n">v1</span><span class="p">.</span><span class="mf">0</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="n">OpenSSH</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Files</span><span class="p">\</span><span class="n">Maven</span><span class="p">\</span><span class="nb">apache-maven</span><span class="p">-</span><span class="mf">3.8</span><span class="p">.</span><span class="mf">1</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">MySQL</span><span class="p">\</span><span class="n">MySQL</span> <span class="n">Server</span>
+</span></span><span class="line"><span class="cl">                          <span class="mf">8.0</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Java</span><span class="p">\</span><span class="n">jdk1</span><span class="p">.</span><span class="py">8</span><span class="p">.</span><span class="n">0_144</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Files</span><span class="p">\</span><span class="n">Python38</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">nodejs</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span>
+</span></span><span class="line"><span class="cl">                          <span class="p">(</span><span class="n">x86</span><span class="p">)\</span><span class="n">NetSarang</span><span class="p">\</span><span class="n">Xshell</span> <span class="mf">7</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">MinGW</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">Git</span><span class="p">\</span><span class="n">cmd</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">User</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">s</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Google</span><span class="p">\</span><span class="n">Chrome</span><span class="p">\</span><span class="n">Application</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">ProgramDa</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">ta</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">Scripts</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">MySQL</span><span class="p">\</span><span class="n">MySQL</span> <span class="n">Shell</span> <span class="mf">8.0</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Use</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">rs</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Microsoft</span><span class="p">\</span><span class="n">WindowsApps</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">IntelliJ</span> <span class="n">IDEA</span> <span class="mf">2021.3</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">WebStorm</span>
+</span></span><span class="line"><span class="cl">                          <span class="mf">2021.3</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Roaming</span><span class="p">\</span><span class="n">npm</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Program</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">PyCharm</span>
+</span></span><span class="line"><span class="cl">                          <span class="mf">2021.3</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">Programs</span><span class="p">\</span><span class="n">Microsoft</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">VS</span> <span class="n">Code</span><span class="p">\</span><span class="n">bin</span><span class="p">;</span><span class="n">D:</span><span class="p">\</span><span class="n">Program</span> <span class="n">Files</span><span class="p">\</span><span class="n">JetBrains</span><span class="p">\</span><span class="n">DataGrip</span> <span class="mf">2021.3</span><span class="p">.</span><span class="mf">1</span><span class="p">\</span><span class="n">bin</span><span class="p">;.</span>
+</span></span><span class="line"><span class="cl">             <span class="n">PSMODULEPATH</span><span class="p">=</span><span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">Documents</span><span class="p">\</span><span class="n">WindowsPowerShell</span><span class="p">\</span><span class="n">Modules</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">Progra</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">m</span> <span class="n">Files</span><span class="p">\</span><span class="n">WindowsPowerShell</span><span class="p">\</span><span class="n">Modules</span><span class="p">;</span><span class="n">C:</span><span class="p">\</span><span class="n">WINDOWS</span><span class="p">\</span><span class="n">system32</span><span class="p">\</span><span class="n">WindowsPowerShel</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">l</span><span class="p">\</span><span class="n">v1</span><span class="p">.</span><span class="mf">0</span><span class="p">\</span><span class="n">Modules</span>
+</span></span><span class="line"><span class="cl">       <span class="n">REQUESTS_CA_BUNDLE</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">SSL_CERT_FILE</span><span class="p">=&lt;</span><span class="n">not</span> <span class="n">set</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     <span class="n">active</span> <span class="n">environment</span> <span class="err">:</span> <span class="n">tmc</span>
+</span></span><span class="line"><span class="cl">    <span class="n">active</span> <span class="n">env</span> <span class="n">location</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span><span class="p">\</span><span class="n">tmc</span>
+</span></span><span class="line"><span class="cl">            <span class="n">shell</span> <span class="n">level</span> <span class="err">:</span> <span class="mf">2</span>
+</span></span><span class="line"><span class="cl">       <span class="n">user</span> <span class="n">config</span> <span class="n">file</span> <span class="err">:</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="py">condarc</span>
+</span></span><span class="line"><span class="cl"> <span class="n">populated</span> <span class="n">config</span> <span class="n">files</span> <span class="err">:</span> <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="py">condarc</span>
+</span></span><span class="line"><span class="cl">          <span class="n">conda</span> <span class="n">version</span> <span class="err">:</span> <span class="mf">4.10</span><span class="p">.</span><span class="py">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">conda-build</span> <span class="n">version</span> <span class="err">:</span> <span class="mf">3.21</span><span class="p">.</span><span class="py">4</span>
+</span></span><span class="line"><span class="cl">         <span class="n">python</span> <span class="n">version</span> <span class="err">:</span> <span class="mf">3.8</span><span class="p">.</span><span class="py">8</span><span class="p">.</span><span class="py">final</span><span class="p">.</span><span class="py">0</span>
+</span></span><span class="line"><span class="cl">       <span class="n">virtual</span> <span class="n">packages</span> <span class="err">:</span> <span class="n">__cuda</span><span class="p">=</span><span class="mf">11.4</span><span class="p">=</span><span class="mf">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">__win</span><span class="p">=</span><span class="mf">0</span><span class="p">=</span><span class="mf">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">__archspec</span><span class="p">=</span><span class="mf">1</span><span class="p">=</span><span class="n">x86_64</span>
+</span></span><span class="line"><span class="cl">       <span class="n">base</span> <span class="n">environment</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span>  <span class="p">(</span><span class="n">writable</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">conda</span> <span class="n">av</span> <span class="n">data</span> <span class="nb">dir </span><span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">etc</span><span class="p">\</span><span class="n">conda</span>
+</span></span><span class="line"><span class="cl">  <span class="n">conda</span> <span class="n">av</span> <span class="n">metadata</span> <span class="n">url</span> <span class="err">:</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">main</span>
+</span></span><span class="line"><span class="cl">           <span class="n">channel</span> <span class="n">URLs</span> <span class="err">:</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">win</span><span class="p">-</span><span class="mf">64</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">main</span><span class="p">/</span><span class="n">noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">r</span><span class="p">/</span><span class="n">win</span><span class="p">-</span><span class="mf">64</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">r</span><span class="p">/</span><span class="n">noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">msys2</span><span class="p">/</span><span class="n">win</span><span class="p">-</span><span class="mf">64</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">repo</span><span class="p">.</span><span class="py">anaconda</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">pkgs</span><span class="p">/</span><span class="n">msys2</span><span class="p">/</span><span class="n">noarch</span>
+</span></span><span class="line"><span class="cl">          <span class="n">package</span> <span class="n">cache</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">pkgs</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="n">conda</span><span class="p">\</span><span class="n">pkgs</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">pkgs</span>
+</span></span><span class="line"><span class="cl">       <span class="n">envs</span> <span class="n">directories</span> <span class="err">:</span> <span class="n">D:</span><span class="p">\</span><span class="n">ProgramData</span><span class="p">\</span><span class="n">Anaconda3</span><span class="p">\</span><span class="n">envs</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\.</span><span class="n">conda</span><span class="p">\</span><span class="n">envs</span>
+</span></span><span class="line"><span class="cl">                          <span class="n">C:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">windows</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Local</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">conda</span><span class="p">\</span><span class="n">envs</span>
+</span></span><span class="line"><span class="cl">               <span class="n">platform</span> <span class="err">:</span> <span class="n">win</span><span class="p">-</span><span class="mf">64</span>
+</span></span><span class="line"><span class="cl">             <span class="nb">user-agent</span> <span class="err">:</span> <span class="n">conda</span><span class="p">/</span><span class="mf">4.10</span><span class="p">.</span><span class="py">1</span> <span class="n">requests</span><span class="p">/</span><span class="mf">2.25</span><span class="p">.</span><span class="py">1</span> <span class="n">CPython</span><span class="p">/</span><span class="mf">3.8</span><span class="p">.</span><span class="py">8</span> <span class="n">Windows</span><span class="p">/</span><span class="mf">10</span> <span class="n">Windows</span><span class="p">/</span><span class="mf">10.0</span><span class="p">.</span><span class="py">19041</span>
+</span></span><span class="line"><span class="cl">          <span class="n">administrator</span> <span class="err">:</span> <span class="n">False</span>
+</span></span><span class="line"><span class="cl">             <span class="n">netrc</span> <span class="n">file</span> <span class="err">:</span> <span class="n">None</span>
+</span></span><span class="line"><span class="cl">           <span class="n">offline</span> <span class="n">mode</span> <span class="err">:</span> <span class="n">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">An</span> <span class="n">unexpected</span> <span class="n">error</span> <span class="n">has</span> <span class="n">occurred</span><span class="p">.</span> <span class="n">Conda</span> <span class="n">has</span> <span class="n">prepared</span> <span class="n">the</span> <span class="n">above</span> <span class="n">report</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">If</span> <span class="n">submitted</span><span class="p">,</span> <span class="n">this</span> <span class="n">report</span> <span class="n">will</span> <span class="n">be</span> <span class="n">used</span> <span class="n">by</span> <span class="n">core</span> <span class="n">maintainers</span> <span class="n">to</span> <span class="n">improve</span>
+</span></span><span class="line"><span class="cl"><span class="n">future</span> <span class="n">releases</span> <span class="n">of</span> <span class="n">conda</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Would</span> <span class="n">you</span> <span class="n">like</span> <span class="n">conda</span> <span class="n">to</span> <span class="n">send</span> <span class="n">this</span> <span class="n">report</span> <span class="n">to</span> <span class="n">the</span> <span class="n">core</span> <span class="n">maintainers</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">y</span><span class="p">/</span><span class="n">N</span><span class="p">]</span><span class="err">:</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">No</span> <span class="n">report</span> <span class="n">sent</span><span class="p">.</span> <span class="n">To</span> <span class="n">permanently</span> <span class="nb">opt-out</span><span class="p">,</span> <span class="n">use</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">$</span> <span class="n">conda</span> <span class="n">config</span> <span class="p">-</span><span class="n">-set</span> <span class="n">report_errors</span> <span class="n">false</span></span></span></code></pre></div></div>
+
+<h2 class="relative group">解决方案
+    <div id="解决方案" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>出现这个问题后，有比较多的解决方案：</p>
+<ul>
+<li>使用命令清理缓存，<code>conda clean -i</code></li>
+<li>删除 ~/.condarc (C:\Users\admin)</li>
+<li>关闭梯子（大杀招）</li>
+</ul>
+<p>反正就是让人头大，解决方案希望对大家有用</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/reading/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Reading
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-12-04T21:24:15&#43;08:00">2021年12月04日</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/docker/">
+              <span class="leading-6">
+                Docker笔记&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-12-05T14:04:54&#43;08:00">2021年12月05日</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                标签
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/categories/"
+                title="Categories">
+                
+                分类
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Luobottle
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        lalalago强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

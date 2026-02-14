@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on Luobottle</title>
+    <link>http://localhost:1313/tags/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on Luobottle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>your@email.com (Luobottle)</managingEditor>
+    <webMaster>your@email.com (Luobottle)</webMaster>
+    <copyright>© 2026 Luobottle</copyright>
+    <lastBuildDate>Fri, 25 Feb 2022 20:39:47 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[LeetCode 1523] 在区间范围内统计奇数数目</title>
+      <link>http://localhost:1313/posts/leetcode-1523/</link>
+      <pubDate>Fri, 25 Feb 2022 20:39:47 +0800</pubDate>
+      <author>your@email.com (Luobottle)</author>
+      <guid>http://localhost:1313/posts/leetcode-1523/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>[LeetCode 537] 复数乘法</title>
+      <link>http://localhost:1313/posts/leetcode-537/</link>
+      <pubDate>Fri, 25 Feb 2022 19:24:45 +0800</pubDate>
+      <author>your@email.com (Luobottle)</author>
+      <guid>http://localhost:1313/posts/leetcode-537/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
